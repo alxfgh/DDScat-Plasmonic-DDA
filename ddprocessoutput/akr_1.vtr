@@ -1,0 +1,43 @@
+<VTKFile type="RectilinearGrid" version="0.1" format="ascii">
+ <RectilinearGrid WholeExtent="1 1 1 1 1 1">
+  <Piece Extent="1 1 1 1 1 1">
+   <Coordinates>
+    <DataArray type="Float32" Name="X_COORDINATES" NumberOfComponents="1" format="ascii">
+   0.00000000    
+    </DataArray>
+    <DataArray type="Float32" Name="Y_COORDINATES" NumberOfComponents="1" format="ascii">
+   0.00000000    
+    </DataArray>
+    <DataArray type="Float32" Name="Z_COORDINATES" NumberOfComponents="1" format="ascii">
+   0.00000000    
+    </DataArray>
+   </Coordinates>
+   <PointData>
+        <DataArray type="Float32" Name="akr" NumberOfComponents="3" format="ascii">
+   1.49998697E-03   0.00000000       0.00000000    
+        </DataArray>
+        <DataArray type="Float32" Name="X_akr" NumberOfComponents="1" format="ascii">
+   1.49998697E-03
+        </DataArray>
+        <DataArray type="Float32" Name="Y_akr" NumberOfComponents="1" format="ascii">
+   0.00000000    
+        </DataArray>
+        <DataArray type="Float32" Name="Z_akr" NumberOfComponents="1" format="ascii">
+   0.00000000    
+        </DataArray>
+        <DataArray type="Float32" Name="E0" NumberOfComponents="3" format="ascii">
+   0.00000000       0.00000000       1.00000000    
+        </DataArray>
+        <DataArray type="Float32" Name="X_E0" NumberOfComponents="1" format="ascii">
+   0.00000000    
+        </DataArray>
+        <DataArray type="Float32" Name="Y_E0" NumberOfComponents="1" format="ascii">
+   0.00000000    
+        </DataArray>
+        <DataArray type="Float32" Name="Z_E0" NumberOfComponents="1" format="ascii">
+   1.00000000    
+        </DataArray>
+     </PointData>
+   </Piece>
+  </RectilinearGrid>
+</VTKFile>
