@@ -1,0 +1,29 @@
+>DDSCAT using parameter file=
+        
+ddscat.par                                                  
+>DDSCAT NUMPROC=   1                                                          
+
+ >>>>> WARNING IN PROCEDURE: REAPAR
+ >>>>>  Strange value of TOL 
+an runtime error: End of file
+
+Error termination. Backtrace:
+#0  0x780c05823960 in ???
+#1  0x780c058244d9 in ???
+#2  0x780c0582510f in ???
+#3  0x780c05a7817b in ???
+#4  0x780c05a7bfd7 in ???
+#5  0x780c05a7c0e3 in ???
+#6  0x573eec1a4cae in ???
+#7  0x573eec118d38 in ???
+#8  0x573eec119a35 in ???
+#9  0x573eec10d36e in ???
+#10  0x780c05429d8f in __libc_start_call_main
+	at ../sysdeps/nptl/libc_start_call_main.h:58
+#11  0x780c05429e3f in __libc_start_main_impl
+	at ../csu/libc-start.c:392
+#12  0x573eec10d394 in ???
+#13  0xffffffffffffffff in ???
+
+ >>>>> WARNING IN PROCEDURE: REAPAR
+ >>>>>  Strange value of TOL 

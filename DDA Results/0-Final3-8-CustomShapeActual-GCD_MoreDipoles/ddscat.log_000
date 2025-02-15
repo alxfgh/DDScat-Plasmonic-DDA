@@ -1,0 +1,732 @@
+>DDSCAT --- DDSCAT 7.3.3 [22.01.20]   
+>DDSCAT     VERSNUM=   733
+>DDSCAT     Single-precision version                                          
+>REAPAR  ========== Parameter file for DDSCAT ===================             
+>   Preliminaries                                                        
+>REAPAR NOTORQ - do not compute torques                                       
+>REAPAR PBCGS2 - CCG Method                                                   
+>REAPAR GPFAFT - using GPFA package from Clive Temperton                      
+>REAPAR GKDLDR - Gutkowicz-Krusin & Draine (2004) LDR for alpha
+>REAPAR NOTBIN - Unformatted binary dump option                               
+>REAPAR  Initial Memory Allocation                                            
+>REAPAR allow MXNX,MXNY,MXNZ=   300   300   300 for target generation         
+>REAPAR **** Target Geometry and Composition ****                             
+>REAPAR FROM_FILE - Shape definition                                          
+>REAPAR  NCOMP=   1                                                           
+>REAPAR comp  1 : ../diel/Ag_evap                                             
+>REAPAR  Additional Nearfield calculation?                                    
+>REAPAR  0 = NRFLD : nearfield calculation not desired                        
+>REAPAR  0.000 0.000 0.000 0.000 0.000 0.000                                  
+>REAPAR  fractional extension in -x,+x,-y,+y,-z,+z directions                 
+>REAPAR  Error Tolerance                                                      
+>REAPAR  1.000E-07 = TOL = max. acceptable normalized residual |Ax-E|/|E|     
+>REAPAR  Maximum number of iterations                                         
+>REAPAR      10000 = MXITER                                                   
+>   Integration limiter for PBC calculations                             
+>REAPAR [GAMMA is not used in present (non-PBC) calculation]                  
+>   Angular resolution for calculation of <cos>, etc.                    
+>REAPAR  0.5000 = ETASCA (parameter controlling number of scattering angles   
+>   Wavelengths (micron)                                                 
+>REAPAR 300 wavelengths from  0.3000 to  0.8000                               
+>   Refractive index of ambient medium                                   
+>REAPAR  1.3330 = NAMBIENT = refractive index of ambient medium               
+>   Effective Radii (micron)                                             
+>REAPAR   1 eff. radii from  0.0010 to  0.0010                                
+>DIVIDE  Only one element initialized 
+>   Define Incident Polarizations                                        
+>REAPAR IORTH= 2                                                              
+>REAPAR  Specify which output files to write                                  
+>REAPAR IWRKSC= 1                                                             
+>   Specify Target Rotations                                             
+>   Specify first IWAV, IRAD, IORI (normally 0 0 0)                      
+>REAPAR Do orthogonal polarization for each case 
+>REAPAR    0.00   0.00 Range of BETA values ; NBETA =   1                     
+>REAPAR    0.00   0.00 Range of THETA values; NTHETA=   1                     
+>REAPAR    0.00   0.00 Range of PHI values ;   NPHI =   1                     
+>   Select Elements of S_ij Matrix to Print                              
+>REAPAR CMDFRM=LFRAME : scattering directions given in Lab Frame              
+>REAPAR  Specify Scattered Directions                                         
+>REAPAR     0.0    0.0  180.0 = phi, theta_min, theta_max for scatt. plane   1
+>REAPAR  181 = number of scattering angles in this scattering plane           
+ DDSCAT ckpt 5, NBETA,NPHI,NTHETA=           1           1           1
+                NORICHAR=           3  NRFLD=           0
+>DDSCAT Allocate memory for first call to TARGET...                           
+>DDSCAT allocating   154.50 MB for IXYZ0;  total=   190.35 MB                 
+>DDSCAT allocating   154.50 MB for ICOMP;  total=   344.85 MB                 
+>DDSCAT allocating    51.50 MB for IOCC;   total=   396.35 MB                 
+>DDSCAT allocating   154.50 MB for ISCR1;  total=   550.84 MB                 
+>DDSCAT allocating   103.00 MB for BETADF; total=   653.84 MB                 
+>DDSCAT allocating   103.00 MB for PHIDF;  total=   756.84 MB                 
+>DDSCAT allocating   103.00 MB for THETADF;total=   859.83 MB                 
+>DDSCAT allocating   103.00 MB for SCRRS2; total=   962.83 MB                 
+>REASHP about to open shape file=
+>REASHP shape.dat                                                                       
+>REASHP completed reading target file=
+>REASHP shape.dat                                                                       
+>REASHP  requires  1 different refractive index files                         
+>REASHP  requires  1 different refractive index files                         
+>TARGET:>TARCYLCAP  Spherical-capped nanorod: A=97.3nm, B=17.6nm, dx=0.5nm 
+           201665 = NAT0 = number of dipoles in target
+>TARGET  NCOMP_NEED=   1 compositions in target                               
+>DDSCAT returned from TARGET:                                                 
+>DDSCAT : dimensions of physical target                                       
+>DDSCAT    -17   195 = min, max values of JX                                  
+>DDSCAT    -17    17 = min, max values of JY                                  
+>DDSCAT    -17    17 = min, max values of JZ                                  
+>DDSCAT   97.50000  18.00000  18.00000 = X0(1-3)                              
+>DDSCAT  --- physical extent of target volume (occupied sites) ---            
+>DDSCAT     80.00000   293.00000 = min, max values of x/d                     
+>DDSCAT      0.50000    35.50000 = min, max values of y/d                     
+>DDSCAT      0.50000    35.50000 = min, max values of z/d                     
+>EXTEND target extent in x,y,z directions =  213,   35,   35 (in Target Frame)
+>DDSCAT returned from EXTEND:                                                 
+>DDSCAT      1   213 = min, max values of JX                                  
+>DDSCAT      1    35 = min, max values of JY                                  
+>DDSCAT      1    35 = min, max values of JZ                                  
+>DDSCAT  ------- physical extent of target volume -------                     
+>DDSCAT     80.00000   293.00000 = min, max values of x/d                     
+>DDSCAT      0.50000    35.50000 = min, max values of y/d                     
+>DDSCAT      0.50000    35.50000 = min, max values of z/d                     
+>DDSCAT Allocate memory required for this problem...                          
+>DDSCAT allocating     1.60 MB for ISCR1;  total=    37.46 MB                 
+>DDSCAT allocating     1.07 MB for SCRRS2; total=    38.53 MB                 
+>DDSCAT allocating     1.15 MB for IXYZ0;  total=    39.68 MB                 
+>DDSCAT allocating     1.60 MB for ICOMP;  total=    41.28 MB                 
+>DDSCAT allocating     0.53 MB for IOCC;   total=    41.82 MB                 
+>DDSCAT allocating     0.77 MB for BETADF; total=    42.59 MB                 
+>DDSCAT allocating     0.77 MB for PHIDF;  total=    43.36 MB                 
+>DDSCAT allocating     0.77 MB for THETADF;total=    44.13 MB                 
+>DDSCAT allocating     6.41 MB for CXADIA; total=    50.53 MB                 
+>DDSCAT allocating   102.52 MB for CXZC;   total=   153.05 MB                 
+>DDSCAT allocating    51.26 MB for CXZW;   total=   204.31 MB                 
+>DDSCAT allocating     6.41 MB for CXAOFF; total=   210.71 MB                 
+>DDSCAT allocating     6.41 MB for CXALOF; total=   217.12 MB                 
+>DDSCAT allocating     6.41 MB for CXALPH; total=   223.53 MB                 
+>DDSCAT allocating     6.41 MB for CXE_TF; total=   229.93 MB                 
+>DDSCAT allocating    64.07 MB for CXSC  ; total=   294.01 MB                 
+>DDSCAT allocating     6.41 MB for CXSCR1; total=   300.41 MB                 
+>DDSCAT allocating     6.41 MB for CXXI;   total=   306.82 MB                 
+>DDSCAT allocating     3.20 MB for SCRRS1; total=   310.03 MB                 
+>DDSCAT                 Total memory allocation =   310.03 MB                 
+        279936 = NAT  = number of lattice sites in extended target
+        216  36  36 = x,y,z length of extended target (Targ. Frame)
+>DIELEC about to read file =                                                  
+>DIELEC ../diel/Ag_evap                                             
+>DIELEC Silver, evaporated (Johnson & Christy 1972, PRB 6, 4370), Alexander Al
+>DIELEC  completed reading file =                                             
+>DIELEC ../diel/Ag_evap                                             
+>DDSCAT m= (   1.40591 ,   0.98549), epsilon= (   1.00539 ,    2.77102) :material 1 1
+>DDSCAT    0.001000 = AEFF = effective radius (physical units)
+>DDSCAT    0.027489 = d/aeff for this target
+>DDSCAT    0.300000 = WAVE = wavelength in vacuo (physical units)
+>DDSCAT    0.225056 = wavelength in ambient medium (phys. units)
+>DDSCAT    0.027918 = k_amb*aeff = 2*pi*aeff/lambda_amb
+>DDSCAT    0.000767 = k_amb*d
+>ROTATE       a_1 in TF:  1.00000000  0.00000000  0.00000000                  
+>ROTATE       a_2 in TF:  0.00000000  1.00000000  0.00000000                  
+>ROTATE       a_3 in TF:  0.00000000  0.00000000  1.00000000                  
+>ROTATE      x_LF in TF:  1.00000000  0.00000000  0.00000000                  
+>ROTATE      y_LF in TF:  0.00000000  1.00000000  0.00000000                  
+>ROTATE      z_LF in TF:  0.00000000  0.00000000  1.00000000                  
+>ROTATE n0=x_LF dot a_1=  1.00000000                                          
+>ROTATE n0=x_LF dot a_2=  0.00000000                                          
+>ROTATE n0=x_LF dot a_3=  0.00000000                                          
+>ROTATE    y_LF dot a_1=  0.00000000                                          
+>ROTATE    y_LF dot a_2=  1.00000000                                          
+>ROTATE    y_LF dot a_3=  0.00000000                                          
+>ROTATE    z_LF dot a_1=  0.00000000                                          
+>ROTATE    z_LF dot a_2=  0.00000000                                          
+>ROTATE    z_LF dot a_3=  1.00000000                                          
+ DDSCAT ckpt 18.21: cflpol1=w000r000k000.pol1   
+>ALPHA  GKDLDR Lattice dispersion relation for |m|k_0d= 0.0010                
+>DIRECT_CALC Estimated total cputime required by DIRECT_CALC=    0.27 cpu-sec  
+>DIRECT_CALC cputime is independent of gamma                                   
+>DIRECT_CALC Actual cputime to complete DIRECT_CALC=    0.01 cpu-sec           
+>ZBCG2  IT=       1 f.err=       NaN                                          
+>TIMEIT  Timing results for: PBCGS2                                           
+>TIMEIT     1.005 = CPU time (sec)                                            
+>GETFML Q_abs =        NaN Q_ext=         NaN
+>SCAT      214 scattering directions used to calculate <cos>, etc.          
+>TIMEIT  Timing results for:  SCAT                                            
+>TIMEIT     2.053 = CPU time (sec)                                            
+>ALPHA  GKDLDR Lattice dispersion relation for |m|k_0d= 0.0010                
+>ZBCG2  IT=       1 f.err=       NaN                                          
+>TIMEIT  Timing results for: PBCGS2                                           
+>TIMEIT     0.848 = CPU time (sec)                                            
+>GETFML Q_abs =        NaN Q_ext=         NaN
+>SCAT      214 scattering directions used to calculate <cos>, etc.          
+>TIMEIT  Timing results for:  SCAT                                            
+>TIMEIT     2.068 = CPU time (sec)                                            
+>DDSCAT m= (   1.31927 ,   0.93258), epsilon= (   0.87076 ,    2.46065) :material 1 1
+>DDSCAT    0.001000 = AEFF = effective radius (physical units)
+>DDSCAT    0.027489 = d/aeff for this target
+>DDSCAT    0.301672 = WAVE = wavelength in vacuo (physical units)
+>DDSCAT    0.226311 = wavelength in ambient medium (phys. units)
+>DDSCAT    0.027764 = k_amb*aeff = 2*pi*aeff/lambda_amb
+>DDSCAT    0.000763 = k_amb*d
+>ROTATE       a_1 in TF:  1.00000000  0.00000000  0.00000000                  
+>ROTATE       a_2 in TF:  0.00000000  1.00000000  0.00000000                  
+>ROTATE       a_3 in TF:  0.00000000  0.00000000  1.00000000                  
+>ROTATE      x_LF in TF:  1.00000000  0.00000000  0.00000000                  
+>ROTATE      y_LF in TF:  0.00000000  1.00000000  0.00000000                  
+>ROTATE      z_LF in TF:  0.00000000  0.00000000  1.00000000                  
+>ROTATE n0=x_LF dot a_1=  1.00000000                                          
+>ROTATE n0=x_LF dot a_2=  0.00000000                                          
+>ROTATE n0=x_LF dot a_3=  0.00000000                                          
+>ROTATE    y_LF dot a_1=  0.00000000                                          
+>ROTATE    y_LF dot a_2=  1.00000000                                          
+>ROTATE    y_LF dot a_3=  0.00000000                                          
+>ROTATE    z_LF dot a_1=  0.00000000                                          
+>ROTATE    z_LF dot a_2=  0.00000000                                          
+>ROTATE    z_LF dot a_3=  1.00000000                                          
+ DDSCAT ckpt 18.21: cflpol1=w001r000k000.pol1   
+>ALPHA  GKDLDR Lattice dispersion relation for |m|k_0d= 0.0009                
+>DIRECT_CALC Estimated total cputime required by DIRECT_CALC=    0.27 cpu-sec  
+>DIRECT_CALC cputime is independent of gamma                                   
+>DIRECT_CALC Actual cputime to complete DIRECT_CALC=    0.01 cpu-sec           
+>ZBCG2  IT=       1 f.err=       NaN                                          
+>TIMEIT  Timing results for: PBCGS2                                           
+>TIMEIT     0.999 = CPU time (sec)                                            
+>GETFML Q_abs =        NaN Q_ext=         NaN
+>SCAT      214 scattering directions used to calculate <cos>, etc.          
+>TIMEIT  Timing results for:  SCAT                                            
+>TIMEIT     2.056 = CPU time (sec)                                            
+>ALPHA  GKDLDR Lattice dispersion relation for |m|k_0d= 0.0009                
+>ZBCG2  IT=       1 f.err=       NaN                                          
+>TIMEIT  Timing results for: PBCGS2                                           
+>TIMEIT     0.848 = CPU time (sec)                                            
+>GETFML Q_abs =        NaN Q_ext=         NaN
+>SCAT      214 scattering directions used to calculate <cos>, etc.          
+>TIMEIT  Timing results for:  SCAT                                            
+>TIMEIT     2.056 = CPU time (sec)                                            
+>DDSCAT m= (   1.27682 ,   0.87358), epsilon= (   0.86714 ,    2.23080) :material 1 1
+>DDSCAT    0.001000 = AEFF = effective radius (physical units)
+>DDSCAT    0.027489 = d/aeff for this target
+>DDSCAT    0.303344 = WAVE = wavelength in vacuo (physical units)
+>DDSCAT    0.227565 = wavelength in ambient medium (phys. units)
+>DDSCAT    0.027610 = k_amb*aeff = 2*pi*aeff/lambda_amb
+>DDSCAT    0.000759 = k_amb*d
+>ROTATE       a_1 in TF:  1.00000000  0.00000000  0.00000000                  
+>ROTATE       a_2 in TF:  0.00000000  1.00000000  0.00000000                  
+>ROTATE       a_3 in TF:  0.00000000  0.00000000  1.00000000                  
+>ROTATE      x_LF in TF:  1.00000000  0.00000000  0.00000000                  
+>ROTATE      y_LF in TF:  0.00000000  1.00000000  0.00000000                  
+>ROTATE      z_LF in TF:  0.00000000  0.00000000  1.00000000                  
+>ROTATE n0=x_LF dot a_1=  1.00000000                                          
+>ROTATE n0=x_LF dot a_2=  0.00000000                                          
+>ROTATE n0=x_LF dot a_3=  0.00000000                                          
+>ROTATE    y_LF dot a_1=  0.00000000                                          
+>ROTATE    y_LF dot a_2=  1.00000000                                          
+>ROTATE    y_LF dot a_3=  0.00000000                                          
+>ROTATE    z_LF dot a_1=  0.00000000                                          
+>ROTATE    z_LF dot a_2=  0.00000000                                          
+>ROTATE    z_LF dot a_3=  1.00000000                                          
+ DDSCAT ckpt 18.21: cflpol1=w002r000k000.pol1   
+>ALPHA  GKDLDR Lattice dispersion relation for |m|k_0d= 0.0009                
+>DIRECT_CALC Estimated total cputime required by DIRECT_CALC=    0.00 cpu-sec  
+>DIRECT_CALC cputime is independent of gamma                                   
+>DIRECT_CALC Actual cputime to complete DIRECT_CALC=    0.01 cpu-sec           
+>ZBCG2  IT=       1 f.err=       NaN                                          
+>TIMEIT  Timing results for: PBCGS2                                           
+>TIMEIT     0.995 = CPU time (sec)                                            
+>GETFML Q_abs =        NaN Q_ext=         NaN
+>SCAT      214 scattering directions used to calculate <cos>, etc.          
+>TIMEIT  Timing results for:  SCAT                                            
+>TIMEIT     2.054 = CPU time (sec)                                            
+>ALPHA  GKDLDR Lattice dispersion relation for |m|k_0d= 0.0009                
+>ZBCG2  IT=       1 f.err=       NaN                                          
+>TIMEIT  Timing results for: PBCGS2                                           
+>TIMEIT     0.840 = CPU time (sec)                                            
+>GETFML Q_abs =        NaN Q_ext=         NaN
+>SCAT      214 scattering directions used to calculate <cos>, etc.          
+>TIMEIT  Timing results for:  SCAT                                            
+>TIMEIT     2.063 = CPU time (sec)                                            
+>DDSCAT m= (   1.23774 ,   0.81507), epsilon= (   0.86765 ,    2.01769) :material 1 1
+>DDSCAT    0.001000 = AEFF = effective radius (physical units)
+>DDSCAT    0.027489 = d/aeff for this target
+>DDSCAT    0.305017 = WAVE = wavelength in vacuo (physical units)
+>DDSCAT    0.228820 = wavelength in ambient medium (phys. units)
+>DDSCAT    0.027459 = k_amb*aeff = 2*pi*aeff/lambda_amb
+>DDSCAT    0.000755 = k_amb*d
+>ROTATE       a_1 in TF:  1.00000000  0.00000000  0.00000000                  
+>ROTATE       a_2 in TF:  0.00000000  1.00000000  0.00000000                  
+>ROTATE       a_3 in TF:  0.00000000  0.00000000  1.00000000                  
+>ROTATE      x_LF in TF:  1.00000000  0.00000000  0.00000000                  
+>ROTATE      y_LF in TF:  0.00000000  1.00000000  0.00000000                  
+>ROTATE      z_LF in TF:  0.00000000  0.00000000  1.00000000                  
+>ROTATE n0=x_LF dot a_1=  1.00000000                                          
+>ROTATE n0=x_LF dot a_2=  0.00000000                                          
+>ROTATE n0=x_LF dot a_3=  0.00000000                                          
+>ROTATE    y_LF dot a_1=  0.00000000                                          
+>ROTATE    y_LF dot a_2=  1.00000000                                          
+>ROTATE    y_LF dot a_3=  0.00000000                                          
+>ROTATE    z_LF dot a_1=  0.00000000                                          
+>ROTATE    z_LF dot a_2=  0.00000000                                          
+>ROTATE    z_LF dot a_3=  1.00000000                                          
+ DDSCAT ckpt 18.21: cflpol1=w003r000k000.pol1   
+>ALPHA  GKDLDR Lattice dispersion relation for |m|k_0d= 0.0008                
+>DIRECT_CALC Estimated total cputime required by DIRECT_CALC=    0.00 cpu-sec  
+>DIRECT_CALC cputime is independent of gamma                                   
+>DIRECT_CALC Actual cputime to complete DIRECT_CALC=    0.01 cpu-sec           
+>ZBCG2  IT=       1 f.err=       NaN                                          
+>TIMEIT  Timing results for: PBCGS2                                           
+>TIMEIT     0.991 = CPU time (sec)                                            
+>GETFML Q_abs =        NaN Q_ext=         NaN
+>SCAT      214 scattering directions used to calculate <cos>, etc.          
+>TIMEIT  Timing results for:  SCAT                                            
+>TIMEIT     2.052 = CPU time (sec)                                            
+>ALPHA  GKDLDR Lattice dispersion relation for |m|k_0d= 0.0008                
+>ZBCG2  IT=       1 f.err=       NaN                                          
+>TIMEIT  Timing results for: PBCGS2                                           
+>TIMEIT     0.841 = CPU time (sec)                                            
+>GETFML Q_abs =        NaN Q_ext=         NaN
+>SCAT      214 scattering directions used to calculate <cos>, etc.          
+>TIMEIT  Timing results for:  SCAT                                            
+>TIMEIT     2.052 = CPU time (sec)                                            
+>DDSCAT m= (   1.20201 ,   0.75707), epsilon= (   0.87167 ,    1.82002) :material 1 1
+>DDSCAT    0.001000 = AEFF = effective radius (physical units)
+>DDSCAT    0.027489 = d/aeff for this target
+>DDSCAT    0.306689 = WAVE = wavelength in vacuo (physical units)
+>DDSCAT    0.230074 = wavelength in ambient medium (phys. units)
+>DDSCAT    0.027309 = k_amb*aeff = 2*pi*aeff/lambda_amb
+>DDSCAT    0.000751 = k_amb*d
+>ROTATE       a_1 in TF:  1.00000000  0.00000000  0.00000000                  
+>ROTATE       a_2 in TF:  0.00000000  1.00000000  0.00000000                  
+>ROTATE       a_3 in TF:  0.00000000  0.00000000  1.00000000                  
+>ROTATE      x_LF in TF:  1.00000000  0.00000000  0.00000000                  
+>ROTATE      y_LF in TF:  0.00000000  1.00000000  0.00000000                  
+>ROTATE      z_LF in TF:  0.00000000  0.00000000  1.00000000                  
+>ROTATE n0=x_LF dot a_1=  1.00000000                                          
+>ROTATE n0=x_LF dot a_2=  0.00000000                                          
+>ROTATE n0=x_LF dot a_3=  0.00000000                                          
+>ROTATE    y_LF dot a_1=  0.00000000                                          
+>ROTATE    y_LF dot a_2=  1.00000000                                          
+>ROTATE    y_LF dot a_3=  0.00000000                                          
+>ROTATE    z_LF dot a_1=  0.00000000                                          
+>ROTATE    z_LF dot a_2=  0.00000000                                          
+>ROTATE    z_LF dot a_3=  1.00000000                                          
+ DDSCAT ckpt 18.21: cflpol1=w004r000k000.pol1   
+>ALPHA  GKDLDR Lattice dispersion relation for |m|k_0d= 0.0008                
+>DIRECT_CALC Estimated total cputime required by DIRECT_CALC=    0.00 cpu-sec  
+>DIRECT_CALC cputime is independent of gamma                                   
+>DIRECT_CALC Actual cputime to complete DIRECT_CALC=    0.01 cpu-sec           
+>ZBCG2  IT=       1 f.err=       NaN                                          
+>TIMEIT  Timing results for: PBCGS2                                           
+>TIMEIT     0.995 = CPU time (sec)                                            
+>GETFML Q_abs =        NaN Q_ext=         NaN
+>SCAT      214 scattering directions used to calculate <cos>, etc.          
+>TIMEIT  Timing results for:  SCAT                                            
+>TIMEIT     2.052 = CPU time (sec)                                            
+>ALPHA  GKDLDR Lattice dispersion relation for |m|k_0d= 0.0008                
+>ZBCG2  IT=       1 f.err=       NaN                                          
+>TIMEIT  Timing results for: PBCGS2                                           
+>TIMEIT     0.842 = CPU time (sec)                                            
+>GETFML Q_abs =        NaN Q_ext=         NaN
+>SCAT      214 scattering directions used to calculate <cos>, etc.          
+>TIMEIT  Timing results for:  SCAT                                            
+>TIMEIT     2.053 = CPU time (sec)                                            
+>DDSCAT m= (   1.16964 ,   0.69957), epsilon= (   0.87865 ,    1.63650) :material 1 1
+>DDSCAT    0.001000 = AEFF = effective radius (physical units)
+>DDSCAT    0.027489 = d/aeff for this target
+>DDSCAT    0.308361 = WAVE = wavelength in vacuo (physical units)
+>DDSCAT    0.231329 = wavelength in ambient medium (phys. units)
+>DDSCAT    0.027161 = k_amb*aeff = 2*pi*aeff/lambda_amb
+>DDSCAT    0.000747 = k_amb*d
+>ROTATE       a_1 in TF:  1.00000000  0.00000000  0.00000000                  
+>ROTATE       a_2 in TF:  0.00000000  1.00000000  0.00000000                  
+>ROTATE       a_3 in TF:  0.00000000  0.00000000  1.00000000                  
+>ROTATE      x_LF in TF:  1.00000000  0.00000000  0.00000000                  
+>ROTATE      y_LF in TF:  0.00000000  1.00000000  0.00000000                  
+>ROTATE      z_LF in TF:  0.00000000  0.00000000  1.00000000                  
+>ROTATE n0=x_LF dot a_1=  1.00000000                                          
+>ROTATE n0=x_LF dot a_2=  0.00000000                                          
+>ROTATE n0=x_LF dot a_3=  0.00000000                                          
+>ROTATE    y_LF dot a_1=  0.00000000                                          
+>ROTATE    y_LF dot a_2=  1.00000000                                          
+>ROTATE    y_LF dot a_3=  0.00000000                                          
+>ROTATE    z_LF dot a_1=  0.00000000                                          
+>ROTATE    z_LF dot a_2=  0.00000000                                          
+>ROTATE    z_LF dot a_3=  1.00000000                                          
+ DDSCAT ckpt 18.21: cflpol1=w005r000k000.pol1   
+>ALPHA  GKDLDR Lattice dispersion relation for |m|k_0d= 0.0008                
+>DIRECT_CALC Estimated total cputime required by DIRECT_CALC=    0.00 cpu-sec  
+>DIRECT_CALC cputime is independent of gamma                                   
+>DIRECT_CALC Actual cputime to complete DIRECT_CALC=    0.01 cpu-sec           
+>ZBCG2  IT=       1 f.err=       NaN                                          
+>TIMEIT  Timing results for: PBCGS2                                           
+>TIMEIT     0.992 = CPU time (sec)                                            
+>GETFML Q_abs =        NaN Q_ext=         NaN
+>SCAT      214 scattering directions used to calculate <cos>, etc.          
+>TIMEIT  Timing results for:  SCAT                                            
+>TIMEIT     2.055 = CPU time (sec)                                            
+>ALPHA  GKDLDR Lattice dispersion relation for |m|k_0d= 0.0008                
+>ZBCG2  IT=       1 f.err=       NaN                                          
+>TIMEIT  Timing results for: PBCGS2                                           
+>TIMEIT     0.842 = CPU time (sec)                                            
+>GETFML Q_abs =        NaN Q_ext=         NaN
+>SCAT      214 scattering directions used to calculate <cos>, etc.          
+>TIMEIT  Timing results for:  SCAT                                            
+>TIMEIT     2.052 = CPU time (sec)                                            
+>DDSCAT m= (   1.14063 ,   0.64258), epsilon= (   0.88813 ,    1.46588) :material 1 1
+>DDSCAT    0.001000 = AEFF = effective radius (physical units)
+>DDSCAT    0.027489 = d/aeff for this target
+>DDSCAT    0.310033 = WAVE = wavelength in vacuo (physical units)
+>DDSCAT    0.232583 = wavelength in ambient medium (phys. units)
+>DDSCAT    0.027015 = k_amb*aeff = 2*pi*aeff/lambda_amb
+>DDSCAT    0.000743 = k_amb*d
+>ROTATE       a_1 in TF:  1.00000000  0.00000000  0.00000000                  
+>ROTATE       a_2 in TF:  0.00000000  1.00000000  0.00000000                  
+>ROTATE       a_3 in TF:  0.00000000  0.00000000  1.00000000                  
+>ROTATE      x_LF in TF:  1.00000000  0.00000000  0.00000000                  
+>ROTATE      y_LF in TF:  0.00000000  1.00000000  0.00000000                  
+>ROTATE      z_LF in TF:  0.00000000  0.00000000  1.00000000                  
+>ROTATE n0=x_LF dot a_1=  1.00000000                                          
+>ROTATE n0=x_LF dot a_2=  0.00000000                                          
+>ROTATE n0=x_LF dot a_3=  0.00000000                                          
+>ROTATE    y_LF dot a_1=  0.00000000                                          
+>ROTATE    y_LF dot a_2=  1.00000000                                          
+>ROTATE    y_LF dot a_3=  0.00000000                                          
+>ROTATE    z_LF dot a_1=  0.00000000                                          
+>ROTATE    z_LF dot a_2=  0.00000000                                          
+>ROTATE    z_LF dot a_3=  1.00000000                                          
+ DDSCAT ckpt 18.21: cflpol1=w006r000k000.pol1   
+>ALPHA  GKDLDR Lattice dispersion relation for |m|k_0d= 0.0007                
+>DIRECT_CALC Estimated total cputime required by DIRECT_CALC=    0.00 cpu-sec  
+>DIRECT_CALC cputime is independent of gamma                                   
+>DIRECT_CALC Actual cputime to complete DIRECT_CALC=    0.01 cpu-sec           
+>ZBCG2  IT=       1 f.err=       NaN                                          
+>TIMEIT  Timing results for: PBCGS2                                           
+>TIMEIT     1.001 = CPU time (sec)                                            
+>GETFML Q_abs =        NaN Q_ext=         NaN
+>SCAT      214 scattering directions used to calculate <cos>, etc.          
+>TIMEIT  Timing results for:  SCAT                                            
+>TIMEIT     2.057 = CPU time (sec)                                            
+>ALPHA  GKDLDR Lattice dispersion relation for |m|k_0d= 0.0007                
+>ZBCG2  IT=       1 f.err=       NaN                                          
+>TIMEIT  Timing results for: PBCGS2                                           
+>TIMEIT     0.868 = CPU time (sec)                                            
+>GETFML Q_abs =        NaN Q_ext=         NaN
+>SCAT      214 scattering directions used to calculate <cos>, etc.          
+>TIMEIT  Timing results for:  SCAT                                            
+>TIMEIT     2.069 = CPU time (sec)                                            
+>DDSCAT m= (   1.10508 ,   0.57835), epsilon= (   0.88672 ,    1.27824) :material 1 1
+>DDSCAT    0.001000 = AEFF = effective radius (physical units)
+>DDSCAT    0.027489 = d/aeff for this target
+>DDSCAT    0.311706 = WAVE = wavelength in vacuo (physical units)
+>DDSCAT    0.233838 = wavelength in ambient medium (phys. units)
+>DDSCAT    0.026870 = k_amb*aeff = 2*pi*aeff/lambda_amb
+>DDSCAT    0.000739 = k_amb*d
+>ROTATE       a_1 in TF:  1.00000000  0.00000000  0.00000000                  
+>ROTATE       a_2 in TF:  0.00000000  1.00000000  0.00000000                  
+>ROTATE       a_3 in TF:  0.00000000  0.00000000  1.00000000                  
+>ROTATE      x_LF in TF:  1.00000000  0.00000000  0.00000000                  
+>ROTATE      y_LF in TF:  0.00000000  1.00000000  0.00000000                  
+>ROTATE      z_LF in TF:  0.00000000  0.00000000  1.00000000                  
+>ROTATE n0=x_LF dot a_1=  1.00000000                                          
+>ROTATE n0=x_LF dot a_2=  0.00000000                                          
+>ROTATE n0=x_LF dot a_3=  0.00000000                                          
+>ROTATE    y_LF dot a_1=  0.00000000                                          
+>ROTATE    y_LF dot a_2=  1.00000000                                          
+>ROTATE    y_LF dot a_3=  0.00000000                                          
+>ROTATE    z_LF dot a_1=  0.00000000                                          
+>ROTATE    z_LF dot a_2=  0.00000000                                          
+>ROTATE    z_LF dot a_3=  1.00000000                                          
+ DDSCAT ckpt 18.21: cflpol1=w007r000k000.pol1   
+>ALPHA  GKDLDR Lattice dispersion relation for |m|k_0d= 0.0007                
+>DIRECT_CALC Estimated total cputime required by DIRECT_CALC=    0.00 cpu-sec  
+>DIRECT_CALC cputime is independent of gamma                                   
+>DIRECT_CALC Actual cputime to complete DIRECT_CALC=    0.01 cpu-sec           
+>ZBCG2  IT=       1 f.err=       NaN                                          
+>TIMEIT  Timing results for: PBCGS2                                           
+>TIMEIT     1.024 = CPU time (sec)                                            
+>GETFML Q_abs =        NaN Q_ext=         NaN
+>SCAT      214 scattering directions used to calculate <cos>, etc.          
+>TIMEIT  Timing results for:  SCAT                                            
+>TIMEIT     2.055 = CPU time (sec)                                            
+>ALPHA  GKDLDR Lattice dispersion relation for |m|k_0d= 0.0007                
+>ZBCG2  IT=       1 f.err=       NaN                                          
+>TIMEIT  Timing results for: PBCGS2                                           
+>TIMEIT     0.840 = CPU time (sec)                                            
+>GETFML Q_abs =        NaN Q_ext=         NaN
+>SCAT      214 scattering directions used to calculate <cos>, etc.          
+>TIMEIT  Timing results for:  SCAT                                            
+>TIMEIT     2.055 = CPU time (sec)                                            
+>DDSCAT m= (   1.05942 ,   0.51821), epsilon= (   0.85384 ,    1.09800) :material 1 1
+>DDSCAT    0.001000 = AEFF = effective radius (physical units)
+>DDSCAT    0.027489 = d/aeff for this target
+>DDSCAT    0.313378 = WAVE = wavelength in vacuo (physical units)
+>DDSCAT    0.235092 = wavelength in ambient medium (phys. units)
+>DDSCAT    0.026726 = k_amb*aeff = 2*pi*aeff/lambda_amb
+>DDSCAT    0.000735 = k_amb*d
+>ROTATE       a_1 in TF:  1.00000000  0.00000000  0.00000000                  
+>ROTATE       a_2 in TF:  0.00000000  1.00000000  0.00000000                  
+>ROTATE       a_3 in TF:  0.00000000  0.00000000  1.00000000                  
+>ROTATE      x_LF in TF:  1.00000000  0.00000000  0.00000000                  
+>ROTATE      y_LF in TF:  0.00000000  1.00000000  0.00000000                  
+>ROTATE      z_LF in TF:  0.00000000  0.00000000  1.00000000                  
+>ROTATE n0=x_LF dot a_1=  1.00000000                                          
+>ROTATE n0=x_LF dot a_2=  0.00000000                                          
+>ROTATE n0=x_LF dot a_3=  0.00000000                                          
+>ROTATE    y_LF dot a_1=  0.00000000                                          
+>ROTATE    y_LF dot a_2=  1.00000000                                          
+>ROTATE    y_LF dot a_3=  0.00000000                                          
+>ROTATE    z_LF dot a_1=  0.00000000                                          
+>ROTATE    z_LF dot a_2=  0.00000000                                          
+>ROTATE    z_LF dot a_3=  1.00000000                                          
+ DDSCAT ckpt 18.21: cflpol1=w008r000k000.pol1   
+>ALPHA  GKDLDR Lattice dispersion relation for |m|k_0d= 0.0007                
+>DIRECT_CALC Estimated total cputime required by DIRECT_CALC=    0.00 cpu-sec  
+>DIRECT_CALC cputime is independent of gamma                                   
+>DIRECT_CALC Actual cputime to complete DIRECT_CALC=    0.01 cpu-sec           
+>ZBCG2  IT=       1 f.err=       NaN                                          
+>TIMEIT  Timing results for: PBCGS2                                           
+>TIMEIT     0.997 = CPU time (sec)                                            
+>GETFML Q_abs =        NaN Q_ext=         NaN
+>SCAT      214 scattering directions used to calculate <cos>, etc.          
+>TIMEIT  Timing results for:  SCAT                                            
+>TIMEIT     2.054 = CPU time (sec)                                            
+>ALPHA  GKDLDR Lattice dispersion relation for |m|k_0d= 0.0007                
+>ZBCG2  IT=       1 f.err=       NaN                                          
+>TIMEIT  Timing results for: PBCGS2                                           
+>TIMEIT     0.842 = CPU time (sec)                                            
+>GETFML Q_abs =        NaN Q_ext=         NaN
+>SCAT      214 scattering directions used to calculate <cos>, etc.          
+>TIMEIT  Timing results for:  SCAT                                            
+>TIMEIT     2.054 = CPU time (sec)                                            
+>DDSCAT m= (   1.00848 ,   0.46946), epsilon= (   0.79664 ,    0.94688) :material 1 1
+>DDSCAT    0.001000 = AEFF = effective radius (physical units)
+>DDSCAT    0.027489 = d/aeff for this target
+>DDSCAT    0.315050 = WAVE = wavelength in vacuo (physical units)
+>DDSCAT    0.236347 = wavelength in ambient medium (phys. units)
+>DDSCAT    0.026585 = k_amb*aeff = 2*pi*aeff/lambda_amb
+>DDSCAT    0.000731 = k_amb*d
+>ROTATE       a_1 in TF:  1.00000000  0.00000000  0.00000000                  
+>ROTATE       a_2 in TF:  0.00000000  1.00000000  0.00000000                  
+>ROTATE       a_3 in TF:  0.00000000  0.00000000  1.00000000                  
+>ROTATE      x_LF in TF:  1.00000000  0.00000000  0.00000000                  
+>ROTATE      y_LF in TF:  0.00000000  1.00000000  0.00000000                  
+>ROTATE      z_LF in TF:  0.00000000  0.00000000  1.00000000                  
+>ROTATE n0=x_LF dot a_1=  1.00000000                                          
+>ROTATE n0=x_LF dot a_2=  0.00000000                                          
+>ROTATE n0=x_LF dot a_3=  0.00000000                                          
+>ROTATE    y_LF dot a_1=  0.00000000                                          
+>ROTATE    y_LF dot a_2=  1.00000000                                          
+>ROTATE    y_LF dot a_3=  0.00000000                                          
+>ROTATE    z_LF dot a_1=  0.00000000                                          
+>ROTATE    z_LF dot a_2=  0.00000000                                          
+>ROTATE    z_LF dot a_3=  1.00000000                                          
+ DDSCAT ckpt 18.21: cflpol1=w009r000k000.pol1   
+>ALPHA  GKDLDR Lattice dispersion relation for |m|k_0d= 0.0006                
+>DIRECT_CALC Estimated total cputime required by DIRECT_CALC=    0.00 cpu-sec  
+>DIRECT_CALC cputime is independent of gamma                                   
+>DIRECT_CALC Actual cputime to complete DIRECT_CALC=    0.01 cpu-sec           
+>ZBCG2  IT=       1 f.err=       NaN                                          
+>TIMEIT  Timing results for: PBCGS2                                           
+>TIMEIT     0.996 = CPU time (sec)                                            
+>GETFML Q_abs =        NaN Q_ext=         NaN
+>SCAT      214 scattering directions used to calculate <cos>, etc.          
+>TIMEIT  Timing results for:  SCAT                                            
+>TIMEIT     2.058 = CPU time (sec)                                            
+>ALPHA  GKDLDR Lattice dispersion relation for |m|k_0d= 0.0006                
+>ZBCG2  IT=       1 f.err=       NaN                                          
+>TIMEIT  Timing results for: PBCGS2                                           
+>TIMEIT     0.841 = CPU time (sec)                                            
+>GETFML Q_abs =        NaN Q_ext=         NaN
+>SCAT      214 scattering directions used to calculate <cos>, etc.          
+>TIMEIT  Timing results for:  SCAT                                            
+>TIMEIT     2.053 = CPU time (sec)                                            
+>DDSCAT m= (   0.95225 ,   0.43210), epsilon= (   0.72007 ,    0.82293) :material 1 1
+>DDSCAT    0.001000 = AEFF = effective radius (physical units)
+>DDSCAT    0.027489 = d/aeff for this target
+>DDSCAT    0.316722 = WAVE = wavelength in vacuo (physical units)
+>DDSCAT    0.237601 = wavelength in ambient medium (phys. units)
+>DDSCAT    0.026444 = k_amb*aeff = 2*pi*aeff/lambda_amb
+>DDSCAT    0.000727 = k_amb*d
+>ROTATE       a_1 in TF:  1.00000000  0.00000000  0.00000000                  
+>ROTATE       a_2 in TF:  0.00000000  1.00000000  0.00000000                  
+>ROTATE       a_3 in TF:  0.00000000  0.00000000  1.00000000                  
+>ROTATE      x_LF in TF:  1.00000000  0.00000000  0.00000000                  
+>ROTATE      y_LF in TF:  0.00000000  1.00000000  0.00000000                  
+>ROTATE      z_LF in TF:  0.00000000  0.00000000  1.00000000                  
+>ROTATE n0=x_LF dot a_1=  1.00000000                                          
+>ROTATE n0=x_LF dot a_2=  0.00000000                                          
+>ROTATE n0=x_LF dot a_3=  0.00000000                                          
+>ROTATE    y_LF dot a_1=  0.00000000                                          
+>ROTATE    y_LF dot a_2=  1.00000000                                          
+>ROTATE    y_LF dot a_3=  0.00000000                                          
+>ROTATE    z_LF dot a_1=  0.00000000                                          
+>ROTATE    z_LF dot a_2=  0.00000000                                          
+>ROTATE    z_LF dot a_3=  1.00000000                                          
+ DDSCAT ckpt 18.21: cflpol1=w010r000k000.pol1   
+>ALPHA  GKDLDR Lattice dispersion relation for |m|k_0d= 0.0006                
+>DIRECT_CALC Estimated total cputime required by DIRECT_CALC=    0.00 cpu-sec  
+>DIRECT_CALC cputime is independent of gamma                                   
+>DIRECT_CALC Actual cputime to complete DIRECT_CALC=    0.01 cpu-sec           
+>ZBCG2  IT=       1 f.err=       NaN                                          
+>TIMEIT  Timing results for: PBCGS2                                           
+>TIMEIT     0.994 = CPU time (sec)                                            
+>GETFML Q_abs =        NaN Q_ext=         NaN
+>SCAT      214 scattering directions used to calculate <cos>, etc.          
+>TIMEIT  Timing results for:  SCAT                                            
+>TIMEIT     2.060 = CPU time (sec)                                            
+>ALPHA  GKDLDR Lattice dispersion relation for |m|k_0d= 0.0006                
+>ZBCG2  IT=       1 f.err=       NaN                                          
+>TIMEIT  Timing results for: PBCGS2                                           
+>TIMEIT     0.840 = CPU time (sec)                                            
+>GETFML Q_abs =        NaN Q_ext=         NaN
+>SCAT      214 scattering directions used to calculate <cos>, etc.          
+>TIMEIT  Timing results for:  SCAT                                            
+>TIMEIT     2.057 = CPU time (sec)                                            
+>DDSCAT m= (   0.89073 ,   0.40613), epsilon= (   0.62847 ,    0.72350) :material 1 1
+>DDSCAT    0.001000 = AEFF = effective radius (physical units)
+>DDSCAT    0.027489 = d/aeff for this target
+>DDSCAT    0.318395 = WAVE = wavelength in vacuo (physical units)
+>DDSCAT    0.238856 = wavelength in ambient medium (phys. units)
+>DDSCAT    0.026305 = k_amb*aeff = 2*pi*aeff/lambda_amb
+>DDSCAT    0.000723 = k_amb*d
+>ROTATE       a_1 in TF:  1.00000000  0.00000000  0.00000000                  
+>ROTATE       a_2 in TF:  0.00000000  1.00000000  0.00000000                  
+>ROTATE       a_3 in TF:  0.00000000  0.00000000  1.00000000                  
+>ROTATE      x_LF in TF:  1.00000000  0.00000000  0.00000000                  
+>ROTATE      y_LF in TF:  0.00000000  1.00000000  0.00000000                  
+>ROTATE      z_LF in TF:  0.00000000  0.00000000  1.00000000                  
+>ROTATE n0=x_LF dot a_1=  1.00000000                                          
+>ROTATE n0=x_LF dot a_2=  0.00000000                                          
+>ROTATE n0=x_LF dot a_3=  0.00000000                                          
+>ROTATE    y_LF dot a_1=  0.00000000                                          
+>ROTATE    y_LF dot a_2=  1.00000000                                          
+>ROTATE    y_LF dot a_3=  0.00000000                                          
+>ROTATE    z_LF dot a_1=  0.00000000                                          
+>ROTATE    z_LF dot a_2=  0.00000000                                          
+>ROTATE    z_LF dot a_3=  1.00000000                                          
+ DDSCAT ckpt 18.21: cflpol1=w011r000k000.pol1   
+>ALPHA  GKDLDR Lattice dispersion relation for |m|k_0d= 0.0005                
+>DIRECT_CALC Estimated total cputime required by DIRECT_CALC=    0.00 cpu-sec  
+>DIRECT_CALC cputime is independent of gamma                                   
+>DIRECT_CALC Actual cputime to complete DIRECT_CALC=    0.01 cpu-sec           
+>ZBCG2  IT=       1 f.err=       NaN                                          
+>TIMEIT  Timing results for: PBCGS2                                           
+>TIMEIT     0.995 = CPU time (sec)                                            
+>GETFML Q_abs =        NaN Q_ext=         NaN
+>SCAT      214 scattering directions used to calculate <cos>, etc.          
+>TIMEIT  Timing results for:  SCAT                                            
+>TIMEIT     2.052 = CPU time (sec)                                            
+>ALPHA  GKDLDR Lattice dispersion relation for |m|k_0d= 0.0005                
+>ZBCG2  IT=       1 f.err=       NaN                                          
+>TIMEIT  Timing results for: PBCGS2                                           
+>TIMEIT     0.862 = CPU time (sec)                                            
+>GETFML Q_abs =        NaN Q_ext=         NaN
+>SCAT      214 scattering directions used to calculate <cos>, etc.          
+>TIMEIT  Timing results for:  SCAT                                            
+>TIMEIT     2.055 = CPU time (sec)                                            
+>DDSCAT m= (   0.82394 ,   0.39154), epsilon= (   0.52557 ,    0.64522) :material 1 1
+>DDSCAT    0.001000 = AEFF = effective radius (physical units)
+>DDSCAT    0.027489 = d/aeff for this target
+>DDSCAT    0.320067 = WAVE = wavelength in vacuo (physical units)
+>DDSCAT    0.240110 = wavelength in ambient medium (phys. units)
+>DDSCAT    0.026168 = k_amb*aeff = 2*pi*aeff/lambda_amb
+>DDSCAT    0.000719 = k_amb*d
+>ROTATE       a_1 in TF:  1.00000000  0.00000000  0.00000000                  
+>ROTATE       a_2 in TF:  0.00000000  1.00000000  0.00000000                  
+>ROTATE       a_3 in TF:  0.00000000  0.00000000  1.00000000                  
+>ROTATE      x_LF in TF:  1.00000000  0.00000000  0.00000000                  
+>ROTATE      y_LF in TF:  0.00000000  1.00000000  0.00000000                  
+>ROTATE      z_LF in TF:  0.00000000  0.00000000  1.00000000                  
+>ROTATE n0=x_LF dot a_1=  1.00000000                                          
+>ROTATE n0=x_LF dot a_2=  0.00000000                                          
+>ROTATE n0=x_LF dot a_3=  0.00000000                                          
+>ROTATE    y_LF dot a_1=  0.00000000                                          
+>ROTATE    y_LF dot a_2=  1.00000000                                          
+>ROTATE    y_LF dot a_3=  0.00000000                                          
+>ROTATE    z_LF dot a_1=  0.00000000                                          
+>ROTATE    z_LF dot a_2=  0.00000000                                          
+>ROTATE    z_LF dot a_3=  1.00000000                                          
+ DDSCAT ckpt 18.21: cflpol1=w012r000k000.pol1   
+>ALPHA  GKDLDR Lattice dispersion relation for |m|k_0d= 0.0005                
+>DIRECT_CALC Estimated total cputime required by DIRECT_CALC=    0.00 cpu-sec  
+>DIRECT_CALC cputime is independent of gamma                                   
+>DIRECT_CALC Actual cputime to complete DIRECT_CALC=    0.01 cpu-sec           
+>ZBCG2  IT=       1 f.err=       NaN                                          
+>TIMEIT  Timing results for: PBCGS2                                           
+>TIMEIT     1.018 = CPU time (sec)                                            
+>GETFML Q_abs =        NaN Q_ext=         NaN
+>SCAT      214 scattering directions used to calculate <cos>, etc.          
+>TIMEIT  Timing results for:  SCAT                                            
+>TIMEIT     2.052 = CPU time (sec)                                            
+>ALPHA  GKDLDR Lattice dispersion relation for |m|k_0d= 0.0005                
+>ZBCG2  IT=       1 f.err=       NaN                                          
+>TIMEIT  Timing results for: PBCGS2                                           
+>TIMEIT     0.860 = CPU time (sec)                                            
+>GETFML Q_abs =        NaN Q_ext=         NaN
+>SCAT      214 scattering directions used to calculate <cos>, etc.          
+>TIMEIT  Timing results for:  SCAT                                            
+>TIMEIT     2.053 = CPU time (sec)                                            
+>DDSCAT m= (   0.71987 ,   0.43086), epsilon= (   0.33258 ,    0.62033) :material 1 1
+>DDSCAT    0.001000 = AEFF = effective radius (physical units)
+>DDSCAT    0.027489 = d/aeff for this target
+>DDSCAT    0.321739 = WAVE = wavelength in vacuo (physical units)
+>DDSCAT    0.241365 = wavelength in ambient medium (phys. units)
+>DDSCAT    0.026032 = k_amb*aeff = 2*pi*aeff/lambda_amb
+>DDSCAT    0.000716 = k_amb*d
+>ROTATE       a_1 in TF:  1.00000000  0.00000000  0.00000000                  
+>ROTATE       a_2 in TF:  0.00000000  1.00000000  0.00000000                  
+>ROTATE       a_3 in TF:  0.00000000  0.00000000  1.00000000                  
+>ROTATE      x_LF in TF:  1.00000000  0.00000000  0.00000000                  
+>ROTATE      y_LF in TF:  0.00000000  1.00000000  0.00000000                  
+>ROTATE      z_LF in TF:  0.00000000  0.00000000  1.00000000                  
+>ROTATE n0=x_LF dot a_1=  1.00000000                                          
+>ROTATE n0=x_LF dot a_2=  0.00000000                                          
+>ROTATE n0=x_LF dot a_3=  0.00000000                                          
+>ROTATE    y_LF dot a_1=  0.00000000                                          
+>ROTATE    y_LF dot a_2=  1.00000000                                          
+>ROTATE    y_LF dot a_3=  0.00000000                                          
+>ROTATE    z_LF dot a_1=  0.00000000                                          
+>ROTATE    z_LF dot a_2=  0.00000000                                          
+>ROTATE    z_LF dot a_3=  1.00000000                                          
+ DDSCAT ckpt 18.21: cflpol1=w013r000k000.pol1   
+>ALPHA  GKDLDR Lattice dispersion relation for |m|k_0d= 0.0005                
+>DIRECT_CALC Estimated total cputime required by DIRECT_CALC=    0.00 cpu-sec  
+>DIRECT_CALC cputime is independent of gamma                                   
+>DIRECT_CALC Actual cputime to complete DIRECT_CALC=    0.01 cpu-sec           
+>ZBCG2  IT=       1 f.err=       NaN                                          
+>TIMEIT  Timing results for: PBCGS2                                           
+>TIMEIT     1.020 = CPU time (sec)                                            
+>GETFML Q_abs =        NaN Q_ext=         NaN
+>SCAT      214 scattering directions used to calculate <cos>, etc.          
+>TIMEIT  Timing results for:  SCAT                                            
+>TIMEIT     2.061 = CPU time (sec)                                            
+>ALPHA  GKDLDR Lattice dispersion relation for |m|k_0d= 0.0005                
+>ZBCG2  IT=       1 f.err=       NaN                                          
+>TIMEIT  Timing results for: PBCGS2                                           
+>TIMEIT     0.843 = CPU time (sec)                                            
+>GETFML Q_abs =        NaN Q_ext=         NaN
+>SCAT      214 scattering directions used to calculate <cos>, etc.          
+>TIMEIT  Timing results for:  SCAT                                            
+>TIMEIT     2.062 = CPU time (sec)                                            
+>DDSCAT m= (   0.61230 ,   0.48659), epsilon= (   0.13815 ,    0.59588) :material 1 1
+>DDSCAT    0.001000 = AEFF = effective radius (physical units)
+>DDSCAT    0.027489 = d/aeff for this target
+>DDSCAT    0.323411 = WAVE = wavelength in vacuo (physical units)
+>DDSCAT    0.242619 = wavelength in ambient medium (phys. units)
+>DDSCAT    0.025897 = k_amb*aeff = 2*pi*aeff/lambda_amb
+>DDSCAT    0.000712 = k_amb*d
+>ROTATE       a_1 in TF:  1.00000000  0.00000000  0.00000000                  
+>ROTATE       a_2 in TF:  0.00000000  1.00000000  0.00000000                  
+>ROTATE       a_3 in TF:  0.00000000  0.00000000  1.00000000                  
+>ROTATE      x_LF in TF:  1.00000000  0.00000000  0.00000000                  
+>ROTATE      y_LF in TF:  0.00000000  1.00000000  0.00000000                  
+>ROTATE      z_LF in TF:  0.00000000  0.00000000  1.00000000                  
+>ROTATE n0=x_LF dot a_1=  1.00000000                                          
+>ROTATE n0=x_LF dot a_2=  0.00000000                                          
+>ROTATE n0=x_LF dot a_3=  0.00000000                                          
+>ROTATE    y_LF dot a_1=  0.00000000                                          
+>ROTATE    y_LF dot a_2=  1.00000000                                          
+>ROTATE    y_LF dot a_3=  0.00000000                                          
+>ROTATE    z_LF dot a_1=  0.00000000                                          
+>ROTATE    z_LF dot a_2=  0.00000000                                          
+>ROTATE    z_LF dot a_3=  1.00000000                                          
+ DDSCAT ckpt 18.21: cflpol1=w014r000k000.pol1   
+>ALPHA  GKDLDR Lattice dispersion relation for |m|k_0d= 0.0004                
+>DIRECT_CALC Estimated total cputime required by DIRECT_CALC=    0.00 cpu-sec  
+>DIRECT_CALC cputime is independent of gamma                                   
+>DIRECT_CALC Actual cputime to complete DIRECT_CALC=    0.01 cpu-sec           

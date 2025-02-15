@@ -1,0 +1,27 @@
+>DDSCAT using parameter file=
+        
+ddscat.par                                                  
+>DDSCAT NUMPROC=   1                                                          
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+
+ >>>>> WARNING IN PROCEDURE: REAPAR
+ >>>>>  Strange value of TOL 
+
+ >>>>> FATAL ERROR IN PROCEDURE: ZBCG2WP
+ >>>>>  ITERN>ITERMX
+ >>>>> EXECUTION ABORTED 
+n ???
+#5  0x7de28427c0e3 in ???
+#6  0x5f6ff0406cae in ???
+#7  0x5f6ff037ad38 in ???
+#8  0x5f6ff037ba35 in ???
+#9  0x5f6ff036f36e in ???
+#10  0x7de283c29d8f in __libc_start_call_main
+	at ../sysdeps/nptl/libc_start_call_main.h:58
+#11  0x7de283c29e3f in __libc_start_main_impl
+	at ../csu/libc-start.c:392
+#12  0x5f6ff036f394 in ???
+#13  0xffffffffffffffff in ???
+
+ >>>>> WARNING IN PROCEDURE: REAPAR
+ >>>>>  Strange value of TOL 

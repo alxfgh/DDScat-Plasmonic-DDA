@@ -1,0 +1,26 @@
+>DDSCAT using parameter file=
+        
+ddscat.par                                                  
+>DDSCAT NUMPROC=   1                                                          
+At line 124 of file dielec.f90 (unit = 3)
+Fortran runtime error: Cannot open file '../diel/Pena26Au74Ag': No such file or directory
+
+Error termination. Backtrace:
+#0  0x73c15c823960 in ???
+#1  0x73c15c8244d9 in ???
+#2  0x73c15c82510f in ???
+#3  0x73c15ca73ee6 in ???
+#4  0x73c15ca741dd in ???
+#5  0x5820240991a8 in ???
+#6  0x582024070447 in ???
+#7  0x582024077a35 in ???
+#8  0x58202406b36e in ???
+#9  0x73c15c429d8f in __libc_start_call_main
+	at ../sysdeps/nptl/libc_start_call_main.h:58
+#10  0x73c15c429e3f in __libc_start_main_impl
+	at ../csu/libc-start.c:392
+#11  0x58202406b394 in ???
+#12  0xffffffffffffffff in ???
+
+ >>>>> WARNING IN PROCEDURE: REAPAR
+ >>>>>  Strange value of TOL 

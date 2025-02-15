@@ -1,0 +1,17 @@
+#!/bin/bash
+#PBS -S /bin/bash
+#PBS -l walltime=240:00:00
+#PBS -l mem=1gb
+
+cd $PBS_O_WORKDIR
+
+echo "Current working directory is:"
+pwd
+
+echo "Starting run at:"
+date
+
+~/DDSCAT2/ddscat
+
+echo "Job finished at:"
+date

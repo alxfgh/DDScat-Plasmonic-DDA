@@ -1,0 +1,24 @@
+ DDSCAT --- DDSCAT 7.3.3 [22.01.20]   
+ TARGET --- Cyl.w.caps, NAT=  27008 NFAC= 248 NLAY=  97 cyl.asp.ratio= 5.4587 
+ GPFAFT --- method of solution 
+ GKDLDR --- prescription for polarizabilities
+ CYLNDRCAP --- shape 
+   27008 = NAT0 = number of dipoles
+ ../diel/Ag_evap                                             
+   0.000   0.000 = beta_min, beta_max ;  NBETA = 1
+   0.000  90.000 = theta_min, theta_max; NTHETA= 6
+   0.000   0.000 = phi_min, phi_max   ;   NPHI = 1
+ 0.5000 = ETASCA (param. controlling # of scatt. dirs used to calculate <cos> etc.
+ Results averaged over    6 target orientations
+                   and  2 incident polarizations
+   aeff       wave       Q_ext     Q_abs      Q_sca     g(1)=<cos>  <cos^2>    Q_bk       Nsca
+ 1.0000E-03 4.5000E-01 8.2498E-03 8.2488E-03 9.0824E-07  3.2925E-04 3.4210E-01 7.5908E-08   184
+ 1.0000E-03 4.6122E-01 1.0253E-02 1.0252E-02 1.0072E-06  2.9654E-04 3.4143E-01 8.3789E-08   184
+ 1.0000E-03 4.7245E-01 2.0886E-02 2.0885E-02 1.2438E-06  2.6407E-04 3.4318E-01 1.0477E-07   184
+ 1.0000E-03 4.8367E-01 8.1317E-02 8.1313E-02 2.0667E-06  2.2679E-04 3.5177E-01 1.8455E-07   184
+ 1.0000E-03 4.9490E-01 3.2981E-02 3.2980E-02 3.3536E-07  3.2796E-04 3.6655E-01 3.2857E-08   184
+ 1.0000E-03 5.0612E-01 1.1031E-02 1.1031E-02 2.8214E-07  3.7064E-04 3.4602E-01 2.4230E-08   184
+ 1.0000E-03 5.1735E-01 6.6321E-03 6.6316E-03 3.4373E-07  3.4580E-04 3.4169E-01 2.8645E-08   184
+ 1.0000E-03 5.2857E-01 5.1123E-03 5.1118E-03 4.0322E-07  3.3735E-04 3.4131E-01 3.3511E-08   184
+ 1.0000E-03 5.3980E-01 4.8663E-03 4.8657E-03 4.5131E-07  3.4219E-04 3.4200E-01 3.7690E-08   184
+ 1.0000E-03 5.5102E-01 4.9677E-03 4.9671E-03 4.8806E-07  3.5886E-04 3.4294E-01 4.1026E-08   184

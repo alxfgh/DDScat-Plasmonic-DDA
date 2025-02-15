@@ -1,0 +1,9 @@
+ DDSCAT --- DDSCAT 7.3.3 [22.01.20]   
+ TARGET --->TARGSPHER  spherical target with explicit spacing                 
+ PBCGS2 --- method of solution 
+ GKDLDR --- prescription for polarizabilities
+ FROM_FILE --- shape 
+   33401 = NAT0 = number of dipoles
+ ../diel/Pena26Au74Ag                                        
+ ../diel/Pena34Au66Ag                                        
+  wave(um)   f(cm-1)     Re(m)     Im(m)     Re(eps)   Im(eps)

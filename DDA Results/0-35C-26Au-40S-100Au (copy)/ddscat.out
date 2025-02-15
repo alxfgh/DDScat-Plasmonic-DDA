@@ -1,0 +1,27 @@
+>DDSCAT using parameter file=
+        
+ddscat.par                                                  
+>DDSCAT NUMPROC=   1                                                          
+At line 667 of file writesca.f90 (unit = 10, file = 'qtable')
+Fortran runtime error: End of file
+
+Error termination. Backtrace:
+#0  0x742078823960 in ???
+#1  0x7420788244d9 in ???
+#2  0x74207882510f in ???
+#3  0x742078a7817b in ???
+#4  0x742078a7bfd7 in ???
+#5  0x742078a7c0e3 in ???
+#6  0x64b7497a3cae in ???
+#7  0x64b749717d38 in ???
+#8  0x64b749718a35 in ???
+#9  0x64b74970c36e in ???
+#10  0x742078429d8f in __libc_start_call_main
+	at ../sysdeps/nptl/libc_start_call_main.h:58
+#11  0x742078429e3f in __libc_start_main_impl
+	at ../csu/libc-start.c:392
+#12  0x64b74970c394 in ???
+#13  0xffffffffffffffff in ???
+
+ >>>>> WARNING IN PROCEDURE: REAPAR
+ >>>>>  Strange value of TOL 

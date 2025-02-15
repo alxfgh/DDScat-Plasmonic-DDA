@@ -1,0 +1,8 @@
+ DDSCAT --- DDSCAT 7.3.3 [22.01.20]   
+ TARGET --- Cyl.w.caps, NAT=  27008 NFAC= 248 NLAY=  97 cyl.asp.ratio= 5.4587 
+ PBCGS2 --- method of solution 
+ GKDLDR --- prescription for polarizabilities
+ CYLNDRCAP --- shape 
+   27008 = NAT0 = number of dipoles
+ ../diel/Ag_evap                                             
+  wave(um)   f(cm-1)     Re(m)     Im(m)     Re(eps)   Im(eps)

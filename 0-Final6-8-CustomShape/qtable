@@ -1,0 +1,114 @@
+ DDSCAT --- DDSCAT 7.3.3 [22.01.20]   
+ TARGET --->TARFROMFILE  Nanorod target: 97.3nm x 17.6nm x 17.6nm, d=1nm      
+ GPFAFT --- method of solution 
+ GKDLDR --- prescription for polarizabilities
+ FROM_FILE --- shape 
+   35739 = NAT0 = number of dipoles
+ ../diel/Ag_evap                                             
+   0.000   0.000 = beta_min, beta_max ;  NBETA = 1
+   0.000   0.000 = theta_min, theta_max; NTHETA= 1
+   0.000   0.000 = phi_min, phi_max   ;   NPHI = 1
+ 0.5000 = ETASCA (param. controlling # of scatt. dirs used to calculate <cos> etc.
+ Results averaged over    1 target orientations
+                   and  1 incident polarizations
+   aeff       wave       Q_ext     Q_abs      Q_sca     g(1)=<cos>  <cos^2>    Q_bk       Nsca
+ 1.0000E-03 8.0000E-01 1.6676E-04 1.6673E-04 3.1165E-08  3.4611E-04 4.0251E-01 3.7126E-09   184
+ 1.0000E-03 8.0202E-01 1.6950E-04 1.6947E-04 3.0776E-08  3.4457E-04 4.0251E-01 3.6663E-09   184
+ 1.0000E-03 8.0404E-01 1.7862E-04 1.7859E-04 3.0391E-08  3.4318E-04 4.0251E-01 3.6204E-09   184
+ 1.0000E-03 8.0606E-01 1.9712E-04 1.9709E-04 3.0013E-08  3.4283E-04 4.0251E-01 3.5754E-09   184
+ 1.0000E-03 8.0808E-01 2.2658E-04 2.2656E-04 2.9655E-08  3.4168E-04 4.0251E-01 3.5328E-09   184
+ 1.0000E-03 8.1010E-01 2.6003E-04 2.6000E-04 2.9335E-08  3.4029E-04 4.0251E-01 3.4947E-09   184
+ 1.0000E-03 8.1212E-01 2.7290E-04 2.7287E-04 2.9056E-08  3.3906E-04 4.0251E-01 3.4614E-09   184
+ 1.0000E-03 8.1414E-01 2.4876E-04 2.4873E-04 2.8772E-08  3.3799E-04 4.0251E-01 3.4277E-09   184
+ 1.0000E-03 8.1616E-01 2.1288E-04 2.1286E-04 2.8452E-08  3.3730E-04 4.0251E-01 3.3895E-09   184
+ 1.0000E-03 8.1818E-01 1.8633E-04 1.8630E-04 2.8112E-08  3.3638E-04 4.0251E-01 3.3489E-09   184
+ 1.0000E-03 8.2020E-01 1.7078E-04 1.7075E-04 2.7768E-08  3.3547E-04 4.0251E-01 3.3080E-09   184
+ 1.0000E-03 8.2222E-01 1.6218E-04 1.6216E-04 2.7428E-08  3.3410E-04 4.0251E-01 3.2675E-09   184
+ 1.0000E-03 8.2424E-01 1.5837E-04 1.5834E-04 2.7092E-08  3.3255E-04 4.0251E-01 3.2276E-09   184
+ 1.0000E-03 8.2626E-01 1.5841E-04 1.5838E-04 2.6766E-08  3.3283E-04 4.0251E-01 3.1887E-09   184
+ 1.0000E-03 8.2828E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 8.3030E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 8.3232E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 8.3434E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 8.3636E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 8.3838E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 8.4040E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 8.4242E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 8.4444E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 8.4646E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 8.4848E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 8.5051E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 8.5253E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 8.5455E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 8.5657E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 8.5859E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 8.6061E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 8.6263E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 8.6465E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 8.6667E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 8.6869E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 8.7071E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 8.7273E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 8.7475E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 8.7677E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 8.7879E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 8.8081E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 8.8283E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 8.8485E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 8.8687E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 8.8889E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 8.9091E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 8.9293E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 8.9495E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 8.9697E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 8.9899E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 9.0101E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 9.0303E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 9.0505E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 9.0707E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 9.0909E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 9.1111E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 9.1313E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 9.1515E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 9.1717E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 9.1919E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 9.2121E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 9.2323E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 9.2525E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 9.2727E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 9.2929E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 9.3131E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 9.3333E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 9.3535E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 9.3737E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 9.3939E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 9.4141E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 9.4343E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 9.4545E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 9.4747E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 9.4949E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 9.5152E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 9.5354E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 9.5556E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 9.5758E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 9.5960E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 9.6162E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 9.6364E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 9.6566E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 9.6768E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 9.6970E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 9.7172E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 9.7374E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 9.7576E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 9.7778E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 9.7980E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 9.8182E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 9.8384E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 9.8586E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 9.8788E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 9.8990E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 9.9192E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 9.9394E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 9.9596E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 9.9798E-01        NaN        NaN        NaN         NaN        NaN        NaN   184
+ 1.0000E-03 1.0000E+00        NaN        NaN        NaN         NaN        NaN        NaN   184

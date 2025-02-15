@@ -1,0 +1,11 @@
+>DDSCAT using parameter file=
+        
+ddscat.par                                                  
+>DDSCAT NUMPROC=   1                                                          
+
+ >>>>> WARNING IN PROCEDURE: REAPAR
+ >>>>>  Strange value of TOL 
+
+ >>>>> FATAL ERROR IN PROCEDURE: SCAT
+ >>>>> CXE01_TF IS PURE IMAGINARY!
+ >>>>> EXECUTION ABORTED 

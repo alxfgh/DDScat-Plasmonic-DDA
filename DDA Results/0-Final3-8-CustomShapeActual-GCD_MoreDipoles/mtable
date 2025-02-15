@@ -1,0 +1,6 @@
+ DDSCAT --- DDSCAT 7.3.3 [22.01.20]   
+ TARGET --->TARCYLCAP  Spherical-capped nanorod: A=97.3nm, B=17.6nm, dx=0.5nm 
+ PBCGS2 --- method of solution 
+ GKDLDR --- prescription for polarizabilities
+ FROM_FILE --- shape 
+  201665 = NAT0 = number of dipoles
