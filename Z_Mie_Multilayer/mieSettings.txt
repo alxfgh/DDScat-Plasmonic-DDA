@@ -1,0 +1,22 @@
+{
+    "numLayers": 3,
+    "refractiveData": [
+        "./diel/dielectric_20Au_80Ag.txt",
+        "./diel/dielectric_30Au_70Ag.txt",
+        "./diel/dielectric_40Au_60Ag.txt"
+    ],
+    "radii": [
+        35,
+        36,
+        40
+    ],
+    "refractiveColumns": [
+        1,
+        2,
+        3
+    ],
+    "startWavelength": 0.300,
+    "stopWavelength": 0.600,
+    "intervalWavelength": 0.001,
+    "outputFileName": "mieOutput.txt"
+}
