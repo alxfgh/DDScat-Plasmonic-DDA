@@ -1,0 +1,818 @@
+>DDSCAT --- DDSCAT 7.3.3 [22.01.20]   
+>DDSCAT     VERSNUM=   733
+>DDSCAT     Single-precision version                                          
+>REAPAR  ========== Parameter file for v7.3 ===================               
+>  **** Preliminaries ****                                               
+>REAPAR NOTORQ - do not compute torques                                       
+>REAPAR PBCGS2 - CCG Method                                                   
+>REAPAR GPFAFT - using GPFA package from Clive Temperton                      
+>REAPAR FLTRCD - Filtered Coupled Dipole (Piller & Martin 1998)
+>REAPAR NOTBIN - Unformatted binary dump option                               
+>REAPAR **** Initial Memory Allocation ****                                   
+>REAPAR allow MXNX,MXNY,MXNZ=   100   100   100 for target generation         
+>REAPAR **** Target Geometry and Composition ****                             
+>REAPAR FROM_FILE - Shape definition                                          
+>REAPAR  NCOMP=   5                                                           
+>REAPAR comp  1 : ../../diel/Pena-Rioux_dielectric_26Au_74Ag                  
+>REAPAR comp  2 : ../../diel/Pena-Rioux_dielectric_34Au_66Ag                  
+>REAPAR comp  3 : ../../diel/Pena-Rioux_dielectric_65Au_35Ag                  
+>REAPAR comp  4 : ../../diel/Pena-Rioux_dielectric_76Au_24Ag                  
+>REAPAR comp  5 : ../../diel/Au_evap                                          
+>REAPAR **** Additional Nearfield calculation? ****                           
+>REAPAR  0 = NRFLD : nearfield calculation not desired                        
+>REAPAR  0.000 0.000 0.000 0.000 0.000 0.000                                  
+>REAPAR  fractional extension in -x,+x,-y,+y,-z,+z directions                 
+>REAPAR **** Error Tolerance ****                                             
+>REAPAR  1.000E-04 = TOL = max. acceptable normalized residual |Ax-E|/|E|     
+>REAPAR **** Maximum number of iterations ****                                
+>REAPAR      10000 = MXITER                                                   
+>  **** Integration cutoff parameter for PBC calculations ****           
+>REAPAR [GAMMA is not used in present (non-PBC) calculation]                  
+>  **** Angular resolution for calculation of <cos>, etc. ****           
+>REAPAR  0.5000 = ETASCA (parameter controlling number of scattering angles   
+>  **** Vacuum wavelengths (micron) ****                                 
+>REAPAR 150 wavelengths from  0.3000 to  0.6000                               
+>  **** Refractive index of ambient medium                               
+>REAPAR  1.3330 = NAMBIENT = refractive index of ambient medium               
+>  **** Effective Radii (micron) ****                                    
+>REAPAR   1 eff. radii from  0.0400 to  0.0400                                
+>DIVIDE  Only one element initialized 
+>  **** Define Incident Polarizations ****                               
+>REAPAR IORTH= 2                                                              
+>REAPAR **** Specify which output files to write ****                         
+>REAPAR IWRKSC= 0                                                             
+>  **** Specify Target Rotations ****                                    
+>  **** Specify first IWAV, IRAD, IORI (normally 0 0 0) ****             
+>REAPAR Do orthogonal polarization for each case 
+>REAPAR    0.00   0.00 Range of BETA values ; NBETA =   1                     
+>REAPAR    0.00   0.00 Range of THETA values; NTHETA=   1                     
+>REAPAR    0.00   0.00 Range of PHI values ;   NPHI =   1                     
+>  **** Select Elements of S_ij Matrix to Print ****                     
+>REAPAR CMDFRM=LFRAME : scattering directions given in Lab Frame              
+>REAPAR **** Specify Scattered Directions ****                                
+>REAPAR     0.0    0.0  180.0 = phi, theta_min, theta_max for scatt. plane   1
+>REAPAR   37 = number of scattering angles in this scattering plane           
+ DDSCAT ckpt 5, NBETA,NPHI,NTHETA=           1           1           1
+                NORICHAR=           3  NRFLD=           0
+>DDSCAT Allocate memory for first call to TARGET...                           
+>DDSCAT allocating     5.72 MB for IXYZ0;  total=    41.58 MB                 
+>DDSCAT allocating     5.72 MB for ICOMP;  total=    47.30 MB                 
+>DDSCAT allocating     1.91 MB for IOCC;   total=    49.21 MB                 
+>DDSCAT allocating     5.72 MB for ISCR1;  total=    54.93 MB                 
+>DDSCAT allocating     3.81 MB for BETADF; total=    58.75 MB                 
+>DDSCAT allocating     3.81 MB for PHIDF;  total=    62.56 MB                 
+>DDSCAT allocating     3.81 MB for THETADF;total=    66.38 MB                 
+>DDSCAT allocating     3.81 MB for SCRRS2; total=    70.19 MB                 
+>REASHP about to open shape file=
+>REASHP shape.dat                                                                       
+>REASHP completed reading target file=
+>REASHP shape.dat                                                                       
+>REASHP  requires  5 different refractive index files                         
+>REASHP  requires  5 different refractive index files                         
+>TARGET:>TARGSPHER  spherical target with explicit spacing                 
+             4169 = NAT0 = number of dipoles in target
+>TARGET  NCOMP_NEED=   5 compositions in target                               
+>DDSCAT returned from TARGET:                                                 
+>DDSCAT : dimensions of physical target                                       
+>DDSCAT     11    31 = min, max values of JX                                  
+>DDSCAT     11    31 = min, max values of JY                                  
+>DDSCAT     11    31 = min, max values of JZ                                  
+>DDSCAT  -20.50000 -20.50000 -20.50000 = X0(1-3)                              
+>DDSCAT  --- physical extent of target volume (occupied sites) ---            
+>DDSCAT    -10.00000    11.00000 = min, max values of x/d                     
+>DDSCAT    -10.00000    11.00000 = min, max values of y/d                     
+>DDSCAT    -10.00000    11.00000 = min, max values of z/d                     
+>EXTEND target extent in x,y,z directions =   21,   21,   21 (in Target Frame)
+>DDSCAT returned from EXTEND:                                                 
+>DDSCAT      1    21 = min, max values of JX                                  
+>DDSCAT      1    21 = min, max values of JY                                  
+>DDSCAT      1    21 = min, max values of JZ                                  
+>DDSCAT  ------- physical extent of target volume -------                     
+>DDSCAT    -10.00000    11.00000 = min, max values of x/d                     
+>DDSCAT    -10.00000    11.00000 = min, max values of y/d                     
+>DDSCAT    -10.00000    11.00000 = min, max values of z/d                     
+>DDSCAT Allocate memory required for this problem...                          
+>DDSCAT allocating     0.08 MB for ISCR1;  total=    35.94 MB                 
+>DDSCAT allocating     0.05 MB for SCRRS2; total=    35.99 MB                 
+>DDSCAT allocating     0.02 MB for IXYZ0;  total=    36.01 MB                 
+>DDSCAT allocating     0.08 MB for ICOMP;  total=    36.09 MB                 
+>DDSCAT allocating     0.03 MB for IOCC;   total=    36.12 MB                 
+>DDSCAT allocating     0.02 MB for BETADF; total=    36.14 MB                 
+>DDSCAT allocating     0.02 MB for PHIDF;  total=    36.15 MB                 
+>DDSCAT allocating     0.02 MB for THETADF;total=    36.17 MB                 
+>DDSCAT allocating     0.32 MB for CXADIA; total=    36.48 MB                 
+>DDSCAT allocating     5.06 MB for CXZC;   total=    41.55 MB                 
+>DDSCAT allocating     2.53 MB for CXZW;   total=    44.08 MB                 
+>DDSCAT allocating     0.32 MB for CXAOFF; total=    44.39 MB                 
+>DDSCAT allocating     0.32 MB for CXALOF; total=    44.71 MB                 
+>DDSCAT allocating     0.32 MB for CXALPH; total=    45.03 MB                 
+>DDSCAT allocating     0.32 MB for CXE_TF; total=    45.34 MB                 
+>DDSCAT allocating     3.16 MB for CXSC  ; total=    48.51 MB                 
+>DDSCAT allocating     0.32 MB for CXSCR1; total=    48.82 MB                 
+>DDSCAT allocating     0.32 MB for CXXI;   total=    49.14 MB                 
+>DDSCAT allocating     0.16 MB for SCRRS1; total=    49.30 MB                 
+>DDSCAT                 Total memory allocation =    49.30 MB                 
+         13824 = NAT  = number of lattice sites in extended target
+         24  24  24 = x,y,z length of extended target (Targ. Frame)
+>DIELEC about to read file =                                                  
+>DIELEC ../../diel/Pena-Rioux_dielectric_26Au_74Ag                  
+>DIELEC Peña-Rodríguez & Rioux calculated dielectric data (26Au/74Ag) prepar
+>DIELEC  completed reading file =                                             
+>DIELEC ../../diel/Pena-Rioux_dielectric_26Au_74Ag                  
+>DIELEC about to read file =                                                  
+>DIELEC ../../diel/Pena-Rioux_dielectric_34Au_66Ag                  
+>DIELEC Peña-Rodríguez & Rioux calculated dielectric data (34Au/66Ag) prepar
+>DIELEC  completed reading file =                                             
+>DIELEC ../../diel/Pena-Rioux_dielectric_34Au_66Ag                  
+>DIELEC about to read file =                                                  
+>DIELEC ../../diel/Pena-Rioux_dielectric_65Au_35Ag                  
+>DIELEC Peña-Rodríguez & Rioux calculated dielectric data (65Au/35Ag) prepar
+>DIELEC  completed reading file =                                             
+>DIELEC ../../diel/Pena-Rioux_dielectric_65Au_35Ag                  
+>DIELEC about to read file =                                                  
+>DIELEC ../../diel/Pena-Rioux_dielectric_76Au_24Ag                  
+>DIELEC Peña-Rodríguez & Rioux calculated dielectric data (76Au/24Ag) prepar
+>DIELEC  completed reading file =                                             
+>DIELEC ../../diel/Pena-Rioux_dielectric_76Au_24Ag                  
+>DIELEC about to read file =                                                  
+>DIELEC ../../diel/Au_evap                                          
+>DIELEC Gold, evaporated (Johnson & Christy 1972, PRB 6, 4370)                
+>DIELEC  completed reading file =                                             
+>DIELEC ../../diel/Au_evap                                          
+>DDSCAT m= (   1.40132 ,   1.34503), epsilon= (   0.15460 ,    3.76963) :material 1 1
+>DDSCAT m= (   1.37480 ,   1.47990), epsilon= (  -0.30001 ,    4.06912) :material 1 2
+>DDSCAT m= (   1.46236 ,   1.73202), epsilon= (  -0.86139 ,    5.06566) :material 1 3
+>DDSCAT m= (   1.47814 ,   1.76670), epsilon= (  -0.93633 ,    5.22287) :material 1 4
+>DDSCAT m= (   1.52658 ,   1.88803), epsilon= (  -1.23418 ,    5.76446) :material 1 5
+>DDSCAT    0.040000 = AEFF = effective radius (physical units)
+>DDSCAT    0.100158 = d/aeff for this target
+>DDSCAT    0.300000 = WAVE = wavelength in vacuo (physical units)
+>DDSCAT    0.225056 = wavelength in ambient medium (phys. units)
+>DDSCAT    1.116732 = k_amb*aeff = 2*pi*aeff/lambda_amb
+>DDSCAT    0.111850 = k_amb*d
+>ROTATE       a_1 in TF:  1.00000000  0.00000000  0.00000000                  
+>ROTATE       a_2 in TF:  0.00000000  1.00000000  0.00000000                  
+>ROTATE       a_3 in TF:  0.00000000  0.00000000  1.00000000                  
+>ROTATE      x_LF in TF:  1.00000000  0.00000000  0.00000000                  
+>ROTATE      y_LF in TF:  0.00000000  1.00000000  0.00000000                  
+>ROTATE      z_LF in TF:  0.00000000  0.00000000  1.00000000                  
+>ROTATE n0=x_LF dot a_1=  1.00000000                                          
+>ROTATE n0=x_LF dot a_2=  0.00000000                                          
+>ROTATE n0=x_LF dot a_3=  0.00000000                                          
+>ROTATE    y_LF dot a_1=  0.00000000                                          
+>ROTATE    y_LF dot a_2=  1.00000000                                          
+>ROTATE    y_LF dot a_3=  0.00000000                                          
+>ROTATE    z_LF dot a_1=  0.00000000                                          
+>ROTATE    z_LF dot a_2=  0.00000000                                          
+>ROTATE    z_LF dot a_3=  1.00000000                                          
+ DDSCAT ckpt 18.23: cflpol1=w000r000k000.pol1   
+>ALPHA  FLTRCD for |m|k_0d= 0.1630                                            
+>DIRECT_CALC Estimated total cputime required by DIRECT_CALC=    0.00 cpu-sec  
+>DIRECT_CALC cputime is independent of gamma                                   
+>DIRECT_CALC Actual cputime to complete DIRECT_CALC=    0.00 cpu-sec           
+>ZBCG2  IT=       1 f.err= 1.277E+00                                          
+>ZBCG2  IT=       2 f.err= 1.697E-02                                          
+>ZBCG2  IT=       3 f.err= 1.344E-03                                          
+>ZBCG2  IT=       4 f.err= 1.717E-04                                          
+>ZBCG2  IT=       5 f.err= 1.940E-05                                          
+>TIMEIT  Timing results for: PBCGS2                                           
+>TIMEIT     0.137 = CPU time (sec)                                            
+>GETFML Q_abs = 1.7715E+00 Q_ext=  2.5452E+00
+>SCAT      408 scattering directions used to calculate <cos>, etc.          
+>TIMEIT  Timing results for:  SCAT                                            
+>TIMEIT     0.051 = CPU time (sec)                                            
+>ALPHA  FLTRCD for |m|k_0d= 0.1630                                            
+>ZBCG2  IT=       1 f.err= 1.277E+00                                          
+>ZBCG2  IT=       2 f.err= 1.697E-02                                          
+>ZBCG2  IT=       3 f.err= 1.344E-03                                          
+>ZBCG2  IT=       4 f.err= 1.718E-04                                          
+>ZBCG2  IT=       5 f.err= 1.939E-05                                          
+>TIMEIT  Timing results for: PBCGS2                                           
+>TIMEIT     0.130 = CPU time (sec)                                            
+>GETFML Q_abs = 1.7715E+00 Q_ext=  2.5452E+00
+>SCAT      408 scattering directions used to calculate <cos>, etc.          
+>TIMEIT  Timing results for:  SCAT                                            
+>TIMEIT     0.051 = CPU time (sec)                                            
+>DIELEC about to read file =                                                  
+>DIELEC ../../diel/Pena-Rioux_dielectric_26Au_74Ag                  
+>DIELEC Peña-Rodríguez & Rioux calculated dielectric data (26Au/74Ag) prepar
+>DIELEC  completed reading file =                                             
+>DIELEC ../../diel/Pena-Rioux_dielectric_26Au_74Ag                  
+>DIELEC about to read file =                                                  
+>DIELEC ../../diel/Pena-Rioux_dielectric_34Au_66Ag                  
+>DIELEC Peña-Rodríguez & Rioux calculated dielectric data (34Au/66Ag) prepar
+>DIELEC  completed reading file =                                             
+>DIELEC ../../diel/Pena-Rioux_dielectric_34Au_66Ag                  
+>DIELEC about to read file =                                                  
+>DIELEC ../../diel/Pena-Rioux_dielectric_65Au_35Ag                  
+>DIELEC Peña-Rodríguez & Rioux calculated dielectric data (65Au/35Ag) prepar
+>DIELEC  completed reading file =                                             
+>DIELEC ../../diel/Pena-Rioux_dielectric_65Au_35Ag                  
+>DIELEC about to read file =                                                  
+>DIELEC ../../diel/Pena-Rioux_dielectric_76Au_24Ag                  
+>DIELEC Peña-Rodríguez & Rioux calculated dielectric data (76Au/24Ag) prepar
+>DIELEC  completed reading file =                                             
+>DIELEC ../../diel/Pena-Rioux_dielectric_76Au_24Ag                  
+>DIELEC about to read file =                                                  
+>DIELEC ../../diel/Au_evap                                          
+>DIELEC Gold, evaporated (Johnson & Christy 1972, PRB 6, 4370)                
+>DIELEC  completed reading file =                                             
+>DIELEC ../../diel/Au_evap                                          
+>DDSCAT m= (   1.39845 ,   1.33901), epsilon= (   0.16272 ,    3.74508) :material 1 1
+>DDSCAT m= (   1.37718 ,   1.47592), epsilon= (  -0.28172 ,    4.06519) :material 1 2
+>DDSCAT m= (   1.46672 ,   1.73250), epsilon= (  -0.85031 ,    5.08220) :material 1 3
+>DDSCAT m= (   1.48270 ,   1.76784), epsilon= (  -0.92687 ,    5.24236) :material 1 4
+>DDSCAT m= (   1.53008 ,   1.88906), epsilon= (  -1.22742 ,    5.78082) :material 1 5
+>DDSCAT    0.040000 = AEFF = effective radius (physical units)
+>DDSCAT    0.100158 = d/aeff for this target
+>DDSCAT    0.301010 = WAVE = wavelength in vacuo (physical units)
+>DDSCAT    0.225814 = wavelength in ambient medium (phys. units)
+>DDSCAT    1.112984 = k_amb*aeff = 2*pi*aeff/lambda_amb
+>DDSCAT    0.111474 = k_amb*d
+>ROTATE       a_1 in TF:  1.00000000  0.00000000  0.00000000                  
+>ROTATE       a_2 in TF:  0.00000000  1.00000000  0.00000000                  
+>ROTATE       a_3 in TF:  0.00000000  0.00000000  1.00000000                  
+>ROTATE      x_LF in TF:  1.00000000  0.00000000  0.00000000                  
+>ROTATE      y_LF in TF:  0.00000000  1.00000000  0.00000000                  
+>ROTATE      z_LF in TF:  0.00000000  0.00000000  1.00000000                  
+>ROTATE n0=x_LF dot a_1=  1.00000000                                          
+>ROTATE n0=x_LF dot a_2=  0.00000000                                          
+>ROTATE n0=x_LF dot a_3=  0.00000000                                          
+>ROTATE    y_LF dot a_1=  0.00000000                                          
+>ROTATE    y_LF dot a_2=  1.00000000                                          
+>ROTATE    y_LF dot a_3=  0.00000000                                          
+>ROTATE    z_LF dot a_1=  0.00000000                                          
+>ROTATE    z_LF dot a_2=  0.00000000                                          
+>ROTATE    z_LF dot a_3=  1.00000000                                          
+ DDSCAT ckpt 18.23: cflpol1=w001r000k000.pol1   
+>ALPHA  FLTRCD for |m|k_0d= 0.1619                                            
+>DIRECT_CALC Estimated total cputime required by DIRECT_CALC=    0.01 cpu-sec  
+>DIRECT_CALC cputime is independent of gamma                                   
+>DIRECT_CALC Actual cputime to complete DIRECT_CALC=    0.00 cpu-sec           
+>ZBCG2  IT=       1 f.err= 1.602E+00                                          
+>ZBCG2  IT=       2 f.err= 1.665E-02                                          
+>ZBCG2  IT=       3 f.err= 1.349E-03                                          
+>ZBCG2  IT=       4 f.err= 1.731E-04                                          
+>ZBCG2  IT=       5 f.err= 1.933E-05                                          
+>TIMEIT  Timing results for: PBCGS2                                           
+>TIMEIT     0.137 = CPU time (sec)                                            
+>GETFML Q_abs = 1.7707E+00 Q_ext=  2.5373E+00
+>SCAT      408 scattering directions used to calculate <cos>, etc.          
+>TIMEIT  Timing results for:  SCAT                                            
+>TIMEIT     0.051 = CPU time (sec)                                            
+>ALPHA  FLTRCD for |m|k_0d= 0.1619                                            
+>ZBCG2  IT=       1 f.err= 1.602E+00                                          
+>ZBCG2  IT=       2 f.err= 1.664E-02                                          
+>ZBCG2  IT=       3 f.err= 1.348E-03                                          
+>ZBCG2  IT=       4 f.err= 1.729E-04                                          
+>ZBCG2  IT=       5 f.err= 1.931E-05                                          
+>TIMEIT  Timing results for: PBCGS2                                           
+>TIMEIT     0.131 = CPU time (sec)                                            
+>GETFML Q_abs = 1.7707E+00 Q_ext=  2.5373E+00
+>SCAT      408 scattering directions used to calculate <cos>, etc.          
+>TIMEIT  Timing results for:  SCAT                                            
+>TIMEIT     0.051 = CPU time (sec)                                            
+>DIELEC about to read file =                                                  
+>DIELEC ../../diel/Pena-Rioux_dielectric_26Au_74Ag                  
+>DIELEC Peña-Rodríguez & Rioux calculated dielectric data (26Au/74Ag) prepar
+>DIELEC  completed reading file =                                             
+>DIELEC ../../diel/Pena-Rioux_dielectric_26Au_74Ag                  
+>DIELEC about to read file =                                                  
+>DIELEC ../../diel/Pena-Rioux_dielectric_34Au_66Ag                  
+>DIELEC Peña-Rodríguez & Rioux calculated dielectric data (34Au/66Ag) prepar
+>DIELEC  completed reading file =                                             
+>DIELEC ../../diel/Pena-Rioux_dielectric_34Au_66Ag                  
+>DIELEC about to read file =                                                  
+>DIELEC ../../diel/Pena-Rioux_dielectric_65Au_35Ag                  
+>DIELEC Peña-Rodríguez & Rioux calculated dielectric data (65Au/35Ag) prepar
+>DIELEC  completed reading file =                                             
+>DIELEC ../../diel/Pena-Rioux_dielectric_65Au_35Ag                  
+>DIELEC about to read file =                                                  
+>DIELEC ../../diel/Pena-Rioux_dielectric_76Au_24Ag                  
+>DIELEC Peña-Rodríguez & Rioux calculated dielectric data (76Au/24Ag) prepar
+>DIELEC  completed reading file =                                             
+>DIELEC ../../diel/Pena-Rioux_dielectric_76Au_24Ag                  
+>DIELEC about to read file =                                                  
+>DIELEC ../../diel/Au_evap                                          
+>DIELEC Gold, evaporated (Johnson & Christy 1972, PRB 6, 4370)                
+>DIELEC  completed reading file =                                             
+>DIELEC ../../diel/Au_evap                                          
+>DDSCAT m= (   1.39526 ,   1.33306), epsilon= (   0.16970 ,    3.71992) :material 1 1
+>DDSCAT m= (   1.37928 ,   1.47170), epsilon= (  -0.26351 ,    4.05977) :material 1 2
+>DDSCAT m= (   1.47104 ,   1.73283), epsilon= (  -0.83872 ,    5.09813) :material 1 3
+>DDSCAT m= (   1.48724 ,   1.76884), epsilon= (  -0.91691 ,    5.26140) :material 1 4
+>DDSCAT m= (   1.53071 ,   1.88962), epsilon= (  -1.22760 ,    5.78490) :material 1 5
+>DDSCAT    0.040000 = AEFF = effective radius (physical units)
+>DDSCAT    0.100158 = d/aeff for this target
+>DDSCAT    0.302027 = WAVE = wavelength in vacuo (physical units)
+>DDSCAT    0.226577 = wavelength in ambient medium (phys. units)
+>DDSCAT    1.109237 = k_amb*aeff = 2*pi*aeff/lambda_amb
+>DDSCAT    0.111099 = k_amb*d
+>ROTATE       a_1 in TF:  1.00000000  0.00000000  0.00000000                  
+>ROTATE       a_2 in TF:  0.00000000  1.00000000  0.00000000                  
+>ROTATE       a_3 in TF:  0.00000000  0.00000000  1.00000000                  
+>ROTATE      x_LF in TF:  1.00000000  0.00000000  0.00000000                  
+>ROTATE      y_LF in TF:  0.00000000  1.00000000  0.00000000                  
+>ROTATE      z_LF in TF:  0.00000000  0.00000000  1.00000000                  
+>ROTATE n0=x_LF dot a_1=  1.00000000                                          
+>ROTATE n0=x_LF dot a_2=  0.00000000                                          
+>ROTATE n0=x_LF dot a_3=  0.00000000                                          
+>ROTATE    y_LF dot a_1=  0.00000000                                          
+>ROTATE    y_LF dot a_2=  1.00000000                                          
+>ROTATE    y_LF dot a_3=  0.00000000                                          
+>ROTATE    z_LF dot a_1=  0.00000000                                          
+>ROTATE    z_LF dot a_2=  0.00000000                                          
+>ROTATE    z_LF dot a_3=  1.00000000                                          
+ DDSCAT ckpt 18.23: cflpol1=w002r000k000.pol1   
+>ALPHA  FLTRCD for |m|k_0d= 0.1608                                            
+>DIRECT_CALC Estimated total cputime required by DIRECT_CALC=    0.01 cpu-sec  
+>DIRECT_CALC cputime is independent of gamma                                   
+>DIRECT_CALC Actual cputime to complete DIRECT_CALC=    0.00 cpu-sec           
+>ZBCG2  IT=       1 f.err= 2.096E+00                                          
+>ZBCG2  IT=       2 f.err= 1.633E-02                                          
+>ZBCG2  IT=       3 f.err= 1.349E-03                                          
+>ZBCG2  IT=       4 f.err= 1.740E-04                                          
+>ZBCG2  IT=       5 f.err= 1.901E-05                                          
+>TIMEIT  Timing results for: PBCGS2                                           
+>TIMEIT     0.138 = CPU time (sec)                                            
+>GETFML Q_abs = 1.7699E+00 Q_ext=  2.5295E+00
+>SCAT      408 scattering directions used to calculate <cos>, etc.          
+>TIMEIT  Timing results for:  SCAT                                            
+>TIMEIT     0.051 = CPU time (sec)                                            
+>ALPHA  FLTRCD for |m|k_0d= 0.1608                                            
+>ZBCG2  IT=       1 f.err= 2.096E+00                                          
+>ZBCG2  IT=       2 f.err= 1.633E-02                                          
+>ZBCG2  IT=       3 f.err= 1.349E-03                                          
+>ZBCG2  IT=       4 f.err= 1.741E-04                                          
+>ZBCG2  IT=       5 f.err= 1.899E-05                                          
+>TIMEIT  Timing results for: PBCGS2                                           
+>TIMEIT     0.131 = CPU time (sec)                                            
+>GETFML Q_abs = 1.7699E+00 Q_ext=  2.5295E+00
+>SCAT      408 scattering directions used to calculate <cos>, etc.          
+>TIMEIT  Timing results for:  SCAT                                            
+>TIMEIT     0.051 = CPU time (sec)                                            
+>DIELEC about to read file =                                                  
+>DIELEC ../../diel/Pena-Rioux_dielectric_26Au_74Ag                  
+>DIELEC Peña-Rodríguez & Rioux calculated dielectric data (26Au/74Ag) prepar
+>DIELEC  completed reading file =                                             
+>DIELEC ../../diel/Pena-Rioux_dielectric_26Au_74Ag                  
+>DIELEC about to read file =                                                  
+>DIELEC ../../diel/Pena-Rioux_dielectric_34Au_66Ag                  
+>DIELEC Peña-Rodríguez & Rioux calculated dielectric data (34Au/66Ag) prepar
+>DIELEC  completed reading file =                                             
+>DIELEC ../../diel/Pena-Rioux_dielectric_34Au_66Ag                  
+>DIELEC about to read file =                                                  
+>DIELEC ../../diel/Pena-Rioux_dielectric_65Au_35Ag                  
+>DIELEC Peña-Rodríguez & Rioux calculated dielectric data (65Au/35Ag) prepar
+>DIELEC  completed reading file =                                             
+>DIELEC ../../diel/Pena-Rioux_dielectric_65Au_35Ag                  
+>DIELEC about to read file =                                                  
+>DIELEC ../../diel/Pena-Rioux_dielectric_76Au_24Ag                  
+>DIELEC Peña-Rodríguez & Rioux calculated dielectric data (76Au/24Ag) prepar
+>DIELEC  completed reading file =                                             
+>DIELEC ../../diel/Pena-Rioux_dielectric_76Au_24Ag                  
+>DIELEC about to read file =                                                  
+>DIELEC ../../diel/Au_evap                                          
+>DIELEC Gold, evaporated (Johnson & Christy 1972, PRB 6, 4370)                
+>DIELEC  completed reading file =                                             
+>DIELEC ../../diel/Au_evap                                          
+>DDSCAT m= (   1.39174 ,   1.32717), epsilon= (   0.17555 ,    3.69415) :material 1 1
+>DDSCAT m= (   1.38110 ,   1.46725), epsilon= (  -0.24540 ,    4.05283) :material 1 2
+>DDSCAT m= (   1.47533 ,   1.73298), epsilon= (  -0.82664 ,    5.11344) :material 1 3
+>DDSCAT m= (   1.49177 ,   1.76970), epsilon= (  -0.90645 ,    5.27997) :material 1 4
+>DDSCAT m= (   1.53119 ,   1.89015), epsilon= (  -1.22811 ,    5.78834) :material 1 5
+>DDSCAT    0.040000 = AEFF = effective radius (physical units)
+>DDSCAT    0.100158 = d/aeff for this target
+>DDSCAT    0.303051 = WAVE = wavelength in vacuo (physical units)
+>DDSCAT    0.227345 = wavelength in ambient medium (phys. units)
+>DDSCAT    1.105489 = k_amb*aeff = 2*pi*aeff/lambda_amb
+>DDSCAT    0.110724 = k_amb*d
+>ROTATE       a_1 in TF:  1.00000000  0.00000000  0.00000000                  
+>ROTATE       a_2 in TF:  0.00000000  1.00000000  0.00000000                  
+>ROTATE       a_3 in TF:  0.00000000  0.00000000  1.00000000                  
+>ROTATE      x_LF in TF:  1.00000000  0.00000000  0.00000000                  
+>ROTATE      y_LF in TF:  0.00000000  1.00000000  0.00000000                  
+>ROTATE      z_LF in TF:  0.00000000  0.00000000  1.00000000                  
+>ROTATE n0=x_LF dot a_1=  1.00000000                                          
+>ROTATE n0=x_LF dot a_2=  0.00000000                                          
+>ROTATE n0=x_LF dot a_3=  0.00000000                                          
+>ROTATE    y_LF dot a_1=  0.00000000                                          
+>ROTATE    y_LF dot a_2=  1.00000000                                          
+>ROTATE    y_LF dot a_3=  0.00000000                                          
+>ROTATE    z_LF dot a_1=  0.00000000                                          
+>ROTATE    z_LF dot a_2=  0.00000000                                          
+>ROTATE    z_LF dot a_3=  1.00000000                                          
+ DDSCAT ckpt 18.23: cflpol1=w003r000k000.pol1   
+>ALPHA  FLTRCD for |m|k_0d= 0.1597                                            
+>DIRECT_CALC Estimated total cputime required by DIRECT_CALC=    0.00 cpu-sec  
+>DIRECT_CALC cputime is independent of gamma                                   
+>DIRECT_CALC Actual cputime to complete DIRECT_CALC=    0.00 cpu-sec           
+>ZBCG2  IT=       1 f.err= 2.874E+00                                          
+>ZBCG2  IT=       2 f.err= 1.602E-02                                          
+>ZBCG2  IT=       3 f.err= 1.348E-03                                          
+>ZBCG2  IT=       4 f.err= 1.748E-04                                          
+>ZBCG2  IT=       5 f.err= 1.859E-05                                          
+>TIMEIT  Timing results for: PBCGS2                                           
+>TIMEIT     0.138 = CPU time (sec)                                            
+>GETFML Q_abs = 1.7690E+00 Q_ext=  2.5216E+00
+>SCAT      408 scattering directions used to calculate <cos>, etc.          
+>TIMEIT  Timing results for:  SCAT                                            
+>TIMEIT     0.051 = CPU time (sec)                                            
+>ALPHA  FLTRCD for |m|k_0d= 0.1597                                            
+>ZBCG2  IT=       1 f.err= 2.874E+00                                          
+>ZBCG2  IT=       2 f.err= 1.602E-02                                          
+>ZBCG2  IT=       3 f.err= 1.349E-03                                          
+>ZBCG2  IT=       4 f.err= 1.752E-04                                          
+>ZBCG2  IT=       5 f.err= 1.862E-05                                          
+>TIMEIT  Timing results for: PBCGS2                                           
+>TIMEIT     0.131 = CPU time (sec)                                            
+>GETFML Q_abs = 1.7690E+00 Q_ext=  2.5216E+00
+>SCAT      408 scattering directions used to calculate <cos>, etc.          
+>TIMEIT  Timing results for:  SCAT                                            
+>TIMEIT     0.051 = CPU time (sec)                                            
+>DIELEC about to read file =                                                  
+>DIELEC ../../diel/Pena-Rioux_dielectric_26Au_74Ag                  
+>DIELEC Peña-Rodríguez & Rioux calculated dielectric data (26Au/74Ag) prepar
+>DIELEC  completed reading file =                                             
+>DIELEC ../../diel/Pena-Rioux_dielectric_26Au_74Ag                  
+>DIELEC about to read file =                                                  
+>DIELEC ../../diel/Pena-Rioux_dielectric_34Au_66Ag                  
+>DIELEC Peña-Rodríguez & Rioux calculated dielectric data (34Au/66Ag) prepar
+>DIELEC  completed reading file =                                             
+>DIELEC ../../diel/Pena-Rioux_dielectric_34Au_66Ag                  
+>DIELEC about to read file =                                                  
+>DIELEC ../../diel/Pena-Rioux_dielectric_65Au_35Ag                  
+>DIELEC Peña-Rodríguez & Rioux calculated dielectric data (65Au/35Ag) prepar
+>DIELEC  completed reading file =                                             
+>DIELEC ../../diel/Pena-Rioux_dielectric_65Au_35Ag                  
+>DIELEC about to read file =                                                  
+>DIELEC ../../diel/Pena-Rioux_dielectric_76Au_24Ag                  
+>DIELEC Peña-Rodríguez & Rioux calculated dielectric data (76Au/24Ag) prepar
+>DIELEC  completed reading file =                                             
+>DIELEC ../../diel/Pena-Rioux_dielectric_76Au_24Ag                  
+>DIELEC about to read file =                                                  
+>DIELEC ../../diel/Au_evap                                          
+>DIELEC Gold, evaporated (Johnson & Christy 1972, PRB 6, 4370)                
+>DIELEC  completed reading file =                                             
+>DIELEC ../../diel/Au_evap                                          
+>DDSCAT m= (   1.38788 ,   1.32135), epsilon= (   0.18024 ,    3.66776) :material 1 1
+>DDSCAT m= (   1.38263 ,   1.46256), epsilon= (  -0.22741 ,    4.04435) :material 1 2
+>DDSCAT m= (   1.47957 ,   1.73297), epsilon= (  -0.81404 ,    5.12810) :material 1 3
+>DDSCAT m= (   1.49628 ,   1.77041), epsilon= (  -0.89548 ,    5.29805) :material 1 4
+>DDSCAT m= (   1.53152 ,   1.89064), epsilon= (  -1.22897 ,    5.79111) :material 1 5
+>DDSCAT    0.040000 = AEFF = effective radius (physical units)
+>DDSCAT    0.100158 = d/aeff for this target
+>DDSCAT    0.304082 = WAVE = wavelength in vacuo (physical units)
+>DDSCAT    0.228118 = wavelength in ambient medium (phys. units)
+>DDSCAT    1.101742 = k_amb*aeff = 2*pi*aeff/lambda_amb
+>DDSCAT    0.110348 = k_amb*d
+>ROTATE       a_1 in TF:  1.00000000  0.00000000  0.00000000                  
+>ROTATE       a_2 in TF:  0.00000000  1.00000000  0.00000000                  
+>ROTATE       a_3 in TF:  0.00000000  0.00000000  1.00000000                  
+>ROTATE      x_LF in TF:  1.00000000  0.00000000  0.00000000                  
+>ROTATE      y_LF in TF:  0.00000000  1.00000000  0.00000000                  
+>ROTATE      z_LF in TF:  0.00000000  0.00000000  1.00000000                  
+>ROTATE n0=x_LF dot a_1=  1.00000000                                          
+>ROTATE n0=x_LF dot a_2=  0.00000000                                          
+>ROTATE n0=x_LF dot a_3=  0.00000000                                          
+>ROTATE    y_LF dot a_1=  0.00000000                                          
+>ROTATE    y_LF dot a_2=  1.00000000                                          
+>ROTATE    y_LF dot a_3=  0.00000000                                          
+>ROTATE    z_LF dot a_1=  0.00000000                                          
+>ROTATE    z_LF dot a_2=  0.00000000                                          
+>ROTATE    z_LF dot a_3=  1.00000000                                          
+ DDSCAT ckpt 18.23: cflpol1=w004r000k000.pol1   
+>ALPHA  FLTRCD for |m|k_0d= 0.1586                                            
+>DIRECT_CALC Estimated total cputime required by DIRECT_CALC=    0.01 cpu-sec  
+>DIRECT_CALC cputime is independent of gamma                                   
+>DIRECT_CALC Actual cputime to complete DIRECT_CALC=    0.00 cpu-sec           
+>ZBCG2  IT=       1 f.err= 3.577E+00                                          
+>ZBCG2  IT=       2 f.err= 1.573E-02                                          
+>ZBCG2  IT=       3 f.err= 1.341E-03                                          
+>ZBCG2  IT=       4 f.err= 1.745E-04                                          
+>ZBCG2  IT=       5 f.err= 1.808E-05                                          
+>TIMEIT  Timing results for: PBCGS2                                           
+>TIMEIT     0.138 = CPU time (sec)                                            
+>GETFML Q_abs = 1.7681E+00 Q_ext=  2.5136E+00
+>SCAT      408 scattering directions used to calculate <cos>, etc.          
+>TIMEIT  Timing results for:  SCAT                                            
+>TIMEIT     0.051 = CPU time (sec)                                            
+>ALPHA  FLTRCD for |m|k_0d= 0.1586                                            
+>ZBCG2  IT=       1 f.err= 3.577E+00                                          
+>ZBCG2  IT=       2 f.err= 1.573E-02                                          
+>ZBCG2  IT=       3 f.err= 1.341E-03                                          
+>ZBCG2  IT=       4 f.err= 1.751E-04                                          
+>ZBCG2  IT=       5 f.err= 1.786E-05                                          
+>TIMEIT  Timing results for: PBCGS2                                           
+>TIMEIT     0.131 = CPU time (sec)                                            
+>GETFML Q_abs = 1.7681E+00 Q_ext=  2.5136E+00
+>SCAT      408 scattering directions used to calculate <cos>, etc.          
+>TIMEIT  Timing results for:  SCAT                                            
+>TIMEIT     0.051 = CPU time (sec)                                            
+>DIELEC about to read file =                                                  
+>DIELEC ../../diel/Pena-Rioux_dielectric_26Au_74Ag                  
+>DIELEC Peña-Rodríguez & Rioux calculated dielectric data (26Au/74Ag) prepar
+>DIELEC  completed reading file =                                             
+>DIELEC ../../diel/Pena-Rioux_dielectric_26Au_74Ag                  
+>DIELEC about to read file =                                                  
+>DIELEC ../../diel/Pena-Rioux_dielectric_34Au_66Ag                  
+>DIELEC Peña-Rodríguez & Rioux calculated dielectric data (34Au/66Ag) prepar
+>DIELEC  completed reading file =                                             
+>DIELEC ../../diel/Pena-Rioux_dielectric_34Au_66Ag                  
+>DIELEC about to read file =                                                  
+>DIELEC ../../diel/Pena-Rioux_dielectric_65Au_35Ag                  
+>DIELEC Peña-Rodríguez & Rioux calculated dielectric data (65Au/35Ag) prepar
+>DIELEC  completed reading file =                                             
+>DIELEC ../../diel/Pena-Rioux_dielectric_65Au_35Ag                  
+>DIELEC about to read file =                                                  
+>DIELEC ../../diel/Pena-Rioux_dielectric_76Au_24Ag                  
+>DIELEC Peña-Rodríguez & Rioux calculated dielectric data (76Au/24Ag) prepar
+>DIELEC  completed reading file =                                             
+>DIELEC ../../diel/Pena-Rioux_dielectric_76Au_24Ag                  
+>DIELEC about to read file =                                                  
+>DIELEC ../../diel/Au_evap                                          
+>DIELEC Gold, evaporated (Johnson & Christy 1972, PRB 6, 4370)                
+>DIELEC  completed reading file =                                             
+>DIELEC ../../diel/Au_evap                                          
+>DDSCAT m= (   1.38368 ,   1.31560), epsilon= (   0.18377 ,    3.64075) :material 1 1
+>DDSCAT m= (   1.38387 ,   1.45761), epsilon= (  -0.20953 ,    4.03429) :material 1 2
+>DDSCAT m= (   1.48378 ,   1.73278), epsilon= (  -0.80092 ,    5.14211) :material 1 3
+>DDSCAT m= (   1.50077 ,   1.77096), epsilon= (  -0.88398 ,    5.31563) :material 1 4
+>DDSCAT m= (   1.53170 ,   1.89111), epsilon= (  -1.23017 ,    5.79321) :material 1 5
+>DDSCAT    0.040000 = AEFF = effective radius (physical units)
+>DDSCAT    0.100158 = d/aeff for this target
+>DDSCAT    0.305119 = WAVE = wavelength in vacuo (physical units)
+>DDSCAT    0.228897 = wavelength in ambient medium (phys. units)
+>DDSCAT    1.097994 = k_amb*aeff = 2*pi*aeff/lambda_amb
+>DDSCAT    0.109973 = k_amb*d
+>ROTATE       a_1 in TF:  1.00000000  0.00000000  0.00000000                  
+>ROTATE       a_2 in TF:  0.00000000  1.00000000  0.00000000                  
+>ROTATE       a_3 in TF:  0.00000000  0.00000000  1.00000000                  
+>ROTATE      x_LF in TF:  1.00000000  0.00000000  0.00000000                  
+>ROTATE      y_LF in TF:  0.00000000  1.00000000  0.00000000                  
+>ROTATE      z_LF in TF:  0.00000000  0.00000000  1.00000000                  
+>ROTATE n0=x_LF dot a_1=  1.00000000                                          
+>ROTATE n0=x_LF dot a_2=  0.00000000                                          
+>ROTATE n0=x_LF dot a_3=  0.00000000                                          
+>ROTATE    y_LF dot a_1=  0.00000000                                          
+>ROTATE    y_LF dot a_2=  1.00000000                                          
+>ROTATE    y_LF dot a_3=  0.00000000                                          
+>ROTATE    z_LF dot a_1=  0.00000000                                          
+>ROTATE    z_LF dot a_2=  0.00000000                                          
+>ROTATE    z_LF dot a_3=  1.00000000                                          
+ DDSCAT ckpt 18.23: cflpol1=w005r000k000.pol1   
+>ALPHA  FLTRCD for |m|k_0d= 0.1575                                            
+>DIRECT_CALC Estimated total cputime required by DIRECT_CALC=    0.00 cpu-sec  
+>DIRECT_CALC cputime is independent of gamma                                   
+>DIRECT_CALC Actual cputime to complete DIRECT_CALC=    0.00 cpu-sec           
+>ZBCG2  IT=       1 f.err= 3.052E+00                                          
+>ZBCG2  IT=       2 f.err= 1.545E-02                                          
+>ZBCG2  IT=       3 f.err= 1.332E-03                                          
+>ZBCG2  IT=       4 f.err= 1.761E-04                                          
+>ZBCG2  IT=       5 f.err= 1.714E-05                                          
+>TIMEIT  Timing results for: PBCGS2                                           
+>TIMEIT     0.137 = CPU time (sec)                                            
+>GETFML Q_abs = 1.7671E+00 Q_ext=  2.5055E+00
+>SCAT      408 scattering directions used to calculate <cos>, etc.          
+>TIMEIT  Timing results for:  SCAT                                            
+>TIMEIT     0.051 = CPU time (sec)                                            
+>ALPHA  FLTRCD for |m|k_0d= 0.1575                                            
+>ZBCG2  IT=       1 f.err= 3.052E+00                                          
+>ZBCG2  IT=       2 f.err= 1.545E-02                                          
+>ZBCG2  IT=       3 f.err= 1.331E-03                                          
+>ZBCG2  IT=       4 f.err= 1.752E-04                                          
+>ZBCG2  IT=       5 f.err= 1.713E-05                                          
+>TIMEIT  Timing results for: PBCGS2                                           
+>TIMEIT     0.131 = CPU time (sec)                                            
+>GETFML Q_abs = 1.7671E+00 Q_ext=  2.5055E+00
+>SCAT      408 scattering directions used to calculate <cos>, etc.          
+>TIMEIT  Timing results for:  SCAT                                            
+>TIMEIT     0.051 = CPU time (sec)                                            
+>DIELEC about to read file =                                                  
+>DIELEC ../../diel/Pena-Rioux_dielectric_26Au_74Ag                  
+>DIELEC Peña-Rodríguez & Rioux calculated dielectric data (26Au/74Ag) prepar
+>DIELEC  completed reading file =                                             
+>DIELEC ../../diel/Pena-Rioux_dielectric_26Au_74Ag                  
+>DIELEC about to read file =                                                  
+>DIELEC ../../diel/Pena-Rioux_dielectric_34Au_66Ag                  
+>DIELEC Peña-Rodríguez & Rioux calculated dielectric data (34Au/66Ag) prepar
+>DIELEC  completed reading file =                                             
+>DIELEC ../../diel/Pena-Rioux_dielectric_34Au_66Ag                  
+>DIELEC about to read file =                                                  
+>DIELEC ../../diel/Pena-Rioux_dielectric_65Au_35Ag                  
+>DIELEC Peña-Rodríguez & Rioux calculated dielectric data (65Au/35Ag) prepar
+>DIELEC  completed reading file =                                             
+>DIELEC ../../diel/Pena-Rioux_dielectric_65Au_35Ag                  
+>DIELEC about to read file =                                                  
+>DIELEC ../../diel/Pena-Rioux_dielectric_76Au_24Ag                  
+>DIELEC Peña-Rodríguez & Rioux calculated dielectric data (76Au/24Ag) prepar
+>DIELEC  completed reading file =                                             
+>DIELEC ../../diel/Pena-Rioux_dielectric_76Au_24Ag                  
+>DIELEC about to read file =                                                  
+>DIELEC ../../diel/Au_evap                                          
+>DIELEC Gold, evaporated (Johnson & Christy 1972, PRB 6, 4370)                
+>DIELEC  completed reading file =                                             
+>DIELEC ../../diel/Au_evap                                          
+>DDSCAT m= (   1.37913 ,   1.30992), epsilon= (   0.18611 ,    3.61312) :material 1 1
+>DDSCAT m= (   1.38481 ,   1.45241), epsilon= (  -0.19180 ,    4.02264) :material 1 2
+>DDSCAT m= (   1.48794 ,   1.73241), epsilon= (  -0.78728 ,    5.15544) :material 1 3
+>DDSCAT m= (   1.50525 ,   1.77136), epsilon= (  -0.87196 ,    5.33269) :material 1 4
+>DDSCAT m= (   1.53172 ,   1.89154), epsilon= (  -1.23173 ,    5.79462) :material 1 5
+>DDSCAT    0.040000 = AEFF = effective radius (physical units)
+>DDSCAT    0.100158 = d/aeff for this target
+>DDSCAT    0.306164 = WAVE = wavelength in vacuo (physical units)
+>DDSCAT    0.229681 = wavelength in ambient medium (phys. units)
+>DDSCAT    1.094247 = k_amb*aeff = 2*pi*aeff/lambda_amb
+>DDSCAT    0.109598 = k_amb*d
+>ROTATE       a_1 in TF:  1.00000000  0.00000000  0.00000000                  
+>ROTATE       a_2 in TF:  0.00000000  1.00000000  0.00000000                  
+>ROTATE       a_3 in TF:  0.00000000  0.00000000  1.00000000                  
+>ROTATE      x_LF in TF:  1.00000000  0.00000000  0.00000000                  
+>ROTATE      y_LF in TF:  0.00000000  1.00000000  0.00000000                  
+>ROTATE      z_LF in TF:  0.00000000  0.00000000  1.00000000                  
+>ROTATE n0=x_LF dot a_1=  1.00000000                                          
+>ROTATE n0=x_LF dot a_2=  0.00000000                                          
+>ROTATE n0=x_LF dot a_3=  0.00000000                                          
+>ROTATE    y_LF dot a_1=  0.00000000                                          
+>ROTATE    y_LF dot a_2=  1.00000000                                          
+>ROTATE    y_LF dot a_3=  0.00000000                                          
+>ROTATE    z_LF dot a_1=  0.00000000                                          
+>ROTATE    z_LF dot a_2=  0.00000000                                          
+>ROTATE    z_LF dot a_3=  1.00000000                                          
+ DDSCAT ckpt 18.23: cflpol1=w006r000k000.pol1   
+>ALPHA  FLTRCD for |m|k_0d= 0.1564                                            
+>DIRECT_CALC Estimated total cputime required by DIRECT_CALC=    0.00 cpu-sec  
+>DIRECT_CALC cputime is independent of gamma                                   
+>DIRECT_CALC Actual cputime to complete DIRECT_CALC=    0.00 cpu-sec           
+>ZBCG2  IT=       1 f.err= 2.144E+00                                          
+>ZBCG2  IT=       2 f.err= 1.518E-02                                          
+>ZBCG2  IT=       3 f.err= 1.316E-03                                          
+>ZBCG2  IT=       4 f.err= 1.742E-04                                          
+>ZBCG2  IT=       5 f.err= 1.658E-05                                          
+>TIMEIT  Timing results for: PBCGS2                                           
+>TIMEIT     0.137 = CPU time (sec)                                            
+>GETFML Q_abs = 1.7661E+00 Q_ext=  2.4974E+00
+>SCAT      408 scattering directions used to calculate <cos>, etc.          
+>TIMEIT  Timing results for:  SCAT                                            
+>TIMEIT     0.051 = CPU time (sec)                                            
+>ALPHA  FLTRCD for |m|k_0d= 0.1564                                            
+>ZBCG2  IT=       1 f.err= 2.144E+00                                          
+>ZBCG2  IT=       2 f.err= 1.518E-02                                          
+>ZBCG2  IT=       3 f.err= 1.318E-03                                          
+>ZBCG2  IT=       4 f.err= 1.745E-04                                          
+>ZBCG2  IT=       5 f.err= 1.670E-05                                          
+>TIMEIT  Timing results for: PBCGS2                                           
+>TIMEIT     0.131 = CPU time (sec)                                            
+>GETFML Q_abs = 1.7661E+00 Q_ext=  2.4974E+00
+>SCAT      408 scattering directions used to calculate <cos>, etc.          
+>TIMEIT  Timing results for:  SCAT                                            
+>TIMEIT     0.051 = CPU time (sec)                                            
+>DIELEC about to read file =                                                  
+>DIELEC ../../diel/Pena-Rioux_dielectric_26Au_74Ag                  
+>DIELEC Peña-Rodríguez & Rioux calculated dielectric data (26Au/74Ag) prepar
+>DIELEC  completed reading file =                                             
+>DIELEC ../../diel/Pena-Rioux_dielectric_26Au_74Ag                  
+>DIELEC about to read file =                                                  
+>DIELEC ../../diel/Pena-Rioux_dielectric_34Au_66Ag                  
+>DIELEC Peña-Rodríguez & Rioux calculated dielectric data (34Au/66Ag) prepar
+>DIELEC  completed reading file =                                             
+>DIELEC ../../diel/Pena-Rioux_dielectric_34Au_66Ag                  
+>DIELEC about to read file =                                                  
+>DIELEC ../../diel/Pena-Rioux_dielectric_65Au_35Ag                  
+>DIELEC Peña-Rodríguez & Rioux calculated dielectric data (65Au/35Ag) prepar
+>DIELEC  completed reading file =                                             
+>DIELEC ../../diel/Pena-Rioux_dielectric_65Au_35Ag                  
+>DIELEC about to read file =                                                  
+>DIELEC ../../diel/Pena-Rioux_dielectric_76Au_24Ag                  
+>DIELEC Peña-Rodríguez & Rioux calculated dielectric data (76Au/24Ag) prepar
+>DIELEC  completed reading file =                                             
+>DIELEC ../../diel/Pena-Rioux_dielectric_76Au_24Ag                  
+>DIELEC about to read file =                                                  
+>DIELEC ../../diel/Au_evap                                          
+>DIELEC Gold, evaporated (Johnson & Christy 1972, PRB 6, 4370)                
+>DIELEC  completed reading file =                                             
+>DIELEC ../../diel/Au_evap                                          
+>DDSCAT m= (   1.37423 ,   1.30432), epsilon= (   0.18726 ,    3.58486) :material 1 1
+>DDSCAT m= (   1.38545 ,   1.44696), epsilon= (  -0.17421 ,    4.00938) :material 1 2
+>DDSCAT m= (   1.49206 ,   1.73186), epsilon= (  -0.77310 ,    5.16807) :material 1 3
+>DDSCAT m= (   1.50971 ,   1.77161), epsilon= (  -0.85939 ,    5.34922) :material 1 4
+>DDSCAT m= (   1.53159 ,   1.89194), epsilon= (  -1.23366 ,    5.79533) :material 1 5
+>DDSCAT    0.040000 = AEFF = effective radius (physical units)
+>DDSCAT    0.100158 = d/aeff for this target
+>DDSCAT    0.307216 = WAVE = wavelength in vacuo (physical units)
+>DDSCAT    0.230470 = wavelength in ambient medium (phys. units)
+>DDSCAT    1.090500 = k_amb*aeff = 2*pi*aeff/lambda_amb
+>DDSCAT    0.109222 = k_amb*d
+>ROTATE       a_1 in TF:  1.00000000  0.00000000  0.00000000                  
+>ROTATE       a_2 in TF:  0.00000000  1.00000000  0.00000000                  
+>ROTATE       a_3 in TF:  0.00000000  0.00000000  1.00000000                  
+>ROTATE      x_LF in TF:  1.00000000  0.00000000  0.00000000                  
+>ROTATE      y_LF in TF:  0.00000000  1.00000000  0.00000000                  
+>ROTATE      z_LF in TF:  0.00000000  0.00000000  1.00000000                  
+>ROTATE n0=x_LF dot a_1=  1.00000000                                          
+>ROTATE n0=x_LF dot a_2=  0.00000000                                          
+>ROTATE n0=x_LF dot a_3=  0.00000000                                          
+>ROTATE    y_LF dot a_1=  0.00000000                                          
+>ROTATE    y_LF dot a_2=  1.00000000                                          
+>ROTATE    y_LF dot a_3=  0.00000000                                          
+>ROTATE    z_LF dot a_1=  0.00000000                                          
+>ROTATE    z_LF dot a_2=  0.00000000                                          
+>ROTATE    z_LF dot a_3=  1.00000000                                          
+ DDSCAT ckpt 18.23: cflpol1=w007r000k000.pol1   
+>ALPHA  FLTRCD for |m|k_0d= 0.1552                                            
+>DIRECT_CALC Estimated total cputime required by DIRECT_CALC=    0.00 cpu-sec  
+>DIRECT_CALC cputime is independent of gamma                                   
+>DIRECT_CALC Actual cputime to complete DIRECT_CALC=    0.00 cpu-sec           
+>ZBCG2  IT=       1 f.err= 1.547E+00                                          
+>ZBCG2  IT=       2 f.err= 1.492E-02                                          
+>ZBCG2  IT=       3 f.err= 1.300E-03                                          
+>ZBCG2  IT=       4 f.err= 1.732E-04                                          
+>ZBCG2  IT=       5 f.err= 1.683E-05                                          
+>TIMEIT  Timing results for: PBCGS2                                           
+>TIMEIT     0.137 = CPU time (sec)                                            
+>GETFML Q_abs = 1.7650E+00 Q_ext=  2.4891E+00
+>SCAT      408 scattering directions used to calculate <cos>, etc.          
+>TIMEIT  Timing results for:  SCAT                                            
+>TIMEIT     0.051 = CPU time (sec)                                            
+>ALPHA  FLTRCD for |m|k_0d= 0.1552                                            
+>ZBCG2  IT=       1 f.err= 1.547E+00                                          
+>ZBCG2  IT=       2 f.err= 1.492E-02                                          
+>ZBCG2  IT=       3 f.err= 1.301E-03                                          
+>ZBCG2  IT=       4 f.err= 1.731E-04                                          
+>ZBCG2  IT=       5 f.err= 1.691E-05                                          
+>TIMEIT  Timing results for: PBCGS2                                           
+>TIMEIT     0.131 = CPU time (sec)                                            
+>GETFML Q_abs = 1.7650E+00 Q_ext=  2.4891E+00
+>SCAT      408 scattering directions used to calculate <cos>, etc.          
+>TIMEIT  Timing results for:  SCAT                                            
+>TIMEIT     0.051 = CPU time (sec)                                            
+>DIELEC about to read file =                                                  
+>DIELEC ../../diel/Pena-Rioux_dielectric_26Au_74Ag                  
+>DIELEC Peña-Rodríguez & Rioux calculated dielectric data (26Au/74Ag) prepar
+>DIELEC  completed reading file =                                             
+>DIELEC ../../diel/Pena-Rioux_dielectric_26Au_74Ag                  
+>DIELEC about to read file =                                                  
+>DIELEC ../../diel/Pena-Rioux_dielectric_34Au_66Ag                  
+>DIELEC Peña-Rodríguez & Rioux calculated dielectric data (34Au/66Ag) prepar
+>DIELEC  completed reading file =                                             
+>DIELEC ../../diel/Pena-Rioux_dielectric_34Au_66Ag                  
+>DIELEC about to read file =                                                  
+>DIELEC ../../diel/Pena-Rioux_dielectric_65Au_35Ag                  
+>DIELEC Peña-Rodríguez & Rioux calculated dielectric data (65Au/35Ag) prepar
+>DIELEC  completed reading file =                                             
+>DIELEC ../../diel/Pena-Rioux_dielectric_65Au_35Ag                  
+>DIELEC about to read file =                                                  
+>DIELEC ../../diel/Pena-Rioux_dielectric_76Au_24Ag                  
+>DIELEC Peña-Rodríguez & Rioux calculated dielectric data (76Au/24Ag) prepar
+>DIELEC  completed reading file =                                             
+>DIELEC ../../diel/Pena-Rioux_dielectric_76Au_24Ag                  
+>DIELEC about to read file =                                                  
+>DIELEC ../../diel/Au_evap                                          
+>DIELEC Gold, evaporated (Johnson & Christy 1972, PRB 6, 4370)                
+>DIELEC  completed reading file =                                             
+>DIELEC ../../diel/Au_evap                                          
+>DDSCAT m= (   1.36904 ,   1.29896), epsilon= (   0.18697 ,    3.55667) :material 1 1
+>DDSCAT m= (   1.38573 ,   1.44114), epsilon= (  -0.15664 ,    3.99408) :material 1 2
+>DDSCAT m= (   1.49615 ,   1.73111), epsilon= (  -0.75828 ,    5.18002) :material 1 3
+>DDSCAT m= (   1.51416 ,   1.77169), epsilon= (  -0.84620 ,    5.36524) :material 1 4
+>DDSCAT m= (   1.53129 ,   1.89230), epsilon= (  -1.23595 ,    5.79533) :material 1 5
+>DDSCAT    0.040000 = AEFF = effective radius (physical units)
+>DDSCAT    0.100158 = d/aeff for this target
+>DDSCAT    0.308276 = WAVE = wavelength in vacuo (physical units)
+>DDSCAT    0.231265 = wavelength in ambient medium (phys. units)
+>DDSCAT    1.086752 = k_amb*aeff = 2*pi*aeff/lambda_amb
+>DDSCAT    0.108847 = k_amb*d
+>ROTATE       a_1 in TF:  1.00000000  0.00000000  0.00000000                  
+>ROTATE       a_2 in TF:  0.00000000  1.00000000  0.00000000                  
+>ROTATE       a_3 in TF:  0.00000000  0.00000000  1.00000000                  
+>ROTATE      x_LF in TF:  1.00000000  0.00000000  0.00000000                  
+>ROTATE      y_LF in TF:  0.00000000  1.00000000  0.00000000                  
+>ROTATE      z_LF in TF:  0.00000000  0.00000000  1.00000000                  
+>ROTATE n0=x_LF dot a_1=  1.00000000                                          
+>ROTATE n0=x_LF dot a_2=  0.00000000                                          
+>ROTATE n0=x_LF dot a_3=  0.00000000                                          
+>ROTATE    y_LF dot a_1=  0.00000000                                          
+>ROTATE    y_LF dot a_2=  1.00000000                                          
+>ROTATE    y_LF dot a_3=  0.00000000                                          
+>ROTATE    z_LF dot a_1=  0.00000000                                          
+>ROTATE    z_LF dot a_2=  0.00000000                                          
+>ROTATE    z_LF dot a_3=  1.00000000                                          
+ DDSCAT ckpt 18.23: cflpol1=w008r000k000.pol1   
+>ALPHA  FLTRCD for |m|k_0d= 0.1541                                            
+>DIRECT_CALC Estimated total cputime required by DIRECT_CALC=    0.00 cpu-sec  
+>DIRECT_CALC cputime is independent of gamma                                   
+>DIRECT_CALC Actual cputime to complete DIRECT_CALC=    0.00 cpu-sec           
+>ZBCG2  IT=       1 f.err= 1.182E+00                                          
+>ZBCG2  IT=       2 f.err= 1.468E-02                                          
+>ZBCG2  IT=       3 f.err= 1.281E-03                                          
+>ZBCG2  IT=       4 f.err= 1.710E-04                                          
+>ZBCG2  IT=       5 f.err= 1.866E-05                                          
+>TIMEIT  Timing results for: PBCGS2                                           
+>TIMEIT     0.138 = CPU time (sec)                                            
+>GETFML Q_abs = 1.7639E+00 Q_ext=  2.4809E+00
+>SCAT      408 scattering directions used to calculate <cos>, etc.          
+>TIMEIT  Timing results for:  SCAT                                            
+>TIMEIT     0.051 = CPU time (sec)                                            
+>ALPHA  FLTRCD for |m|k_0d= 0.1541                                            
+>ZBCG2  IT=       1 f.err= 1.182E+00                                          
+>ZBCG2  IT=       2 f.err= 1.4
